@@ -1,14 +1,22 @@
 <script lang="ts">
+	import oqsgLogo from '$lib/assets/partners/oqsg.png';
+	import ewnLogo from '$lib/assets/partners/ewn.png';
+	import co811Logo from '$lib/assets/partners/co811.svg';
+	import veriforceLogo from '$lib/assets/partners/veriforce.svg';
+	import nccerLogo from '$lib/assets/partners/nccer.svg';
+	import itsLogo from '$lib/assets/partners/its.svg';
+	import isnetworldLogo from '$lib/assets/partners/isnetworld.avif';
+
 	const platforms = [
-		{ name: 'OQSG', label: 'Operator Qualification' },
-		{ name: 'PEC SafeLand / Basic 7.0', label: 'Safety Orientation' },
-		{ name: 'PEC H2S Clear', label: 'Hydrogen Sulfide Training' },
-		{ name: 'NCCER', label: 'Craft & Safety Training' },
-		{ name: 'Veriforce', label: 'Compliance & OQ' },
-		{ name: 'ITS', label: 'Industrial Training Services' },
-		{ name: 'EWN', label: 'Energy World Net' },
-		{ name: 'ISNetworld', label: 'Contractor Management' },
-		{ name: '811 Colorado', label: 'Damage Prevention' }
+		{ name: 'OQSG', label: 'Operator Qualification', logo: oqsgLogo },
+		{ name: 'PEC SafeLand / Basic 7.0', label: 'Safety Orientation', logo: null },
+		{ name: 'PEC H2S Clear', label: 'Hydrogen Sulfide Training', logo: null },
+		{ name: 'NCCER', label: 'Craft & Safety Training', logo: nccerLogo },
+		{ name: 'Veriforce', label: 'Compliance & OQ', logo: veriforceLogo },
+		{ name: 'ITS', label: 'Industrial Training Services', logo: itsLogo },
+		{ name: 'EWN', label: 'Energy World Net', logo: ewnLogo },
+		{ name: 'ISNetworld', label: 'Contractor Management', logo: isnetworldLogo },
+		{ name: '811 Colorado', label: 'Damage Prevention', logo: co811Logo }
 	];
 </script>
 
@@ -109,18 +117,23 @@
 			</section>
 
 			<!-- Partner & Accredited Platforms Section -->
-			<section class="pt-6 border-t border-zinc-800/80 max-w-4xl mx-auto space-y-4" aria-label="Accredited platforms and partners">
+			<section class="pt-6 border-t border-zinc-800/80 max-w-4xl mx-auto space-y-5" aria-label="Accredited platforms and partners">
 				<div class="flex items-center justify-center gap-3">
 					<div class="h-px bg-zinc-800 flex-1"></div>
 					<span class="text-xs font-mono font-bold uppercase tracking-widest text-zinc-400">PARTNER WITH / ACCREDITED PLATFORMS</span>
 					<div class="h-px bg-zinc-800 flex-1"></div>
 				</div>
 
-				<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-2.5">
+				<div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
 					{#each platforms as platform}
-						<div class="industrial-box p-3 text-center hover:border-zinc-500 transition-colors duration-200 flex flex-col items-center justify-center">
-							<span class="text-xs font-bold font-mono text-white tracking-wide uppercase">{platform.name}</span>
-							<span class="text-[10px] text-zinc-500 font-mono tracking-normal mt-0.5">{platform.label}</span>
+						<div class="industrial-box p-4 text-center hover:border-zinc-500 transition-colors duration-200 flex flex-col items-center justify-center min-h-[95px] space-y-2">
+							{#if platform.logo}
+								<img src={platform.logo} alt="{platform.name} logo" class="h-8 w-auto max-w-[140px] object-contain opacity-90 hover:opacity-100 transition-opacity" />
+							{/if}
+							<div class="text-center">
+								<span class="text-xs font-bold font-mono text-white tracking-wide uppercase block">{platform.name}</span>
+								<span class="text-[10px] text-zinc-400 font-mono tracking-normal block mt-0.5">{platform.label}</span>
+							</div>
 						</div>
 					{/each}
 				</div>
