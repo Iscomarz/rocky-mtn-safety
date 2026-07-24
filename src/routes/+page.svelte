@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import logoOficial from '$lib/assets/Rocky-mtn-safety/logo-oficial.png';
+	import logoOficial from '$lib/assets/Rocky-mtn-safety/logo-cropped.png';
 	import oqsgLogo from '$lib/assets/partners/oqsg.png';
 	import ewnLogo from '$lib/assets/partners/ewn.png';
 	import co811Logo from '$lib/assets/partners/co811.svg';
@@ -62,7 +62,7 @@
 	<!-- Top Navigation / Header -->
 	<header class="relative z-10 w-full max-w-7xl mx-auto px-6 py-6 flex items-center justify-between border-b border-zinc-800">
 		<div class="flex items-center gap-3">
-			<img src={logoOficial} alt="Rocky Mountain Safety Official Logo" class="h-12 sm:h-16 w-auto object-contain" />
+			<img src={logoOficial} alt="Rocky Mountain Safety Official Logo" class="h-16 sm:h-20 w-auto object-contain" />
 		</div>
 		<div 
 			class="inline-flex items-center gap-2.5 px-3.5 py-1.5 bg-[rgb(210,47,37)] text-white text-xs font-bold uppercase tracking-wider min-h-[36px]"
@@ -136,9 +136,9 @@
 				</div>
 			</section>
 
-			<!-- Partner & Accredited Platforms Section (Carousel Slider) -->
+			<!-- Partner & Accredited Platforms Section (Multi-item Carousel Slider) -->
 			<section 
-				class="pt-6 border-t border-zinc-800/80 max-w-4xl mx-auto space-y-5" 
+				class="pt-6 border-t border-zinc-800/80 max-w-5xl mx-auto space-y-4" 
 				aria-label="Accredited platforms and partners carousel"
 				onmouseenter={() => (isPaused = true)}
 				onmouseleave={() => (isPaused = false)}
@@ -149,31 +149,31 @@
 					<div class="h-px bg-zinc-800 flex-1"></div>
 				</div>
 
-				<div class="relative flex items-center gap-3">
+				<div class="relative flex items-center gap-2 sm:gap-3">
 					<!-- Previous Button -->
 					<button
 						onclick={prevSlide}
-						class="w-10 h-10 shrink-0 bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 hover:border-[rgb(210,47,37)] text-zinc-300 hover:text-white font-mono font-bold text-xl flex items-center justify-center transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[rgb(210,47,37)] cursor-pointer select-none"
-						aria-label="Previous partner"
+						class="w-8 h-8 sm:w-10 sm:h-10 shrink-0 bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 hover:border-[rgb(210,47,37)] text-zinc-300 hover:text-white font-mono font-bold text-xl flex items-center justify-center transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[rgb(210,47,37)] cursor-pointer select-none z-10"
+						aria-label="Previous partners"
 					>
 						‹
 					</button>
 
-					<!-- Slider Content Window -->
+					<!-- Slider Content Window: 4 items on desktop, 3 on tablet, 2 on mobile -->
 					<div class="flex-1 overflow-hidden">
 						<div 
-							class="flex transition-transform duration-500 ease-in-out"
-							style="transform: translateX(-{currentIndex * 100}%);"
+							class="flex transition-transform duration-500 ease-in-out gap-3"
+							style="transform: translateX(-{currentIndex * 25}%);"
 						>
-							{#each platforms as platform, idx}
-								<div class="w-full shrink-0 px-1">
-									<div class="industrial-box p-5 text-center hover:border-[rgb(210,47,37)] transition-colors duration-200 flex flex-col items-center justify-center h-[110px] space-y-2">
+							{#each [...platforms, ...platforms] as platform, idx}
+								<div class="w-[calc(50%-6px)] sm:w-[calc(33.333%-8px)] md:w-[calc(25%-9px)] shrink-0">
+									<div class="p-3 text-center flex flex-col items-center justify-center h-[95px] space-y-1.5">
 										{#if platform.logo}
-											<img src={platform.logo} alt="{platform.name} logo" class="h-10 w-auto max-w-[160px] object-contain opacity-90 hover:opacity-100 transition-opacity" />
+											<img src={platform.logo} alt="{platform.name} logo" class="h-8 sm:h-9 w-auto max-w-[130px] object-contain opacity-90 hover:opacity-100 transition-opacity" />
 										{/if}
-										<div class="text-center">
-											<span class="text-sm font-bold font-mono text-white tracking-wide uppercase block">{platform.name}</span>
-											<span class="text-xs text-zinc-400 font-mono tracking-normal block mt-0.5">{platform.label}</span>
+										<div class="text-center w-full px-1">
+											<span class="text-xs font-bold font-mono text-white tracking-wide uppercase block truncate">{platform.name}</span>
+											<span class="text-[10px] text-zinc-400 font-mono tracking-normal block truncate mt-0.5">{platform.label}</span>
 										</div>
 									</div>
 								</div>
@@ -184,22 +184,11 @@
 					<!-- Next Button -->
 					<button
 						onclick={nextSlide}
-						class="w-10 h-10 shrink-0 bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 hover:border-[rgb(210,47,37)] text-zinc-300 hover:text-white font-mono font-bold text-xl flex items-center justify-center transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[rgb(210,47,37)] cursor-pointer select-none"
-						aria-label="Next partner"
+						class="w-8 h-8 sm:w-10 sm:h-10 shrink-0 bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 hover:border-[rgb(210,47,37)] text-zinc-300 hover:text-white font-mono font-bold text-xl flex items-center justify-center transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[rgb(210,47,37)] cursor-pointer select-none z-10"
+						aria-label="Next partners"
 					>
 						›
 					</button>
-				</div>
-
-				<!-- Pagination Indicators -->
-				<div class="flex justify-center items-center gap-1.5 pt-1">
-					{#each platforms as _, idx}
-						<button
-							onclick={() => goToSlide(idx)}
-							class="h-2 transition-all duration-300 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[rgb(210,47,37)] {idx === currentIndex ? 'bg-[rgb(210,47,37)] w-6' : 'bg-zinc-700 hover:bg-zinc-500 w-2'}"
-							aria-label="Go to slide {idx + 1}"
-						></button>
-					{/each}
 				</div>
 			</section>
 
