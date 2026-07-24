@@ -1,23 +1,40 @@
 <script lang="ts">
-	import logo from '$lib/assets/Rocky-mtn-safety/RMS by Safe Hands Logo.png';
+	const platforms = [
+		{ name: 'OQSG', label: 'Operator Qualification' },
+		{ name: 'PEC SafeLand / Basic 7.0', label: 'Safety Orientation' },
+		{ name: 'PEC H2S Clear', label: 'Hydrogen Sulfide Training' },
+		{ name: 'NCCER', label: 'Craft & Safety Training' },
+		{ name: 'Veriforce', label: 'Compliance & OQ' },
+		{ name: 'ITS', label: 'Industrial Training Services' },
+		{ name: 'EWN', label: 'Energy World Net' },
+		{ name: 'ISNetworld', label: 'Contractor Management' },
+		{ name: '811 Colorado', label: 'Damage Prevention' }
+	];
 </script>
 
 <svelte:head>
-	<title>Rocky Mountain Safety - Industrial Safety Training & Consulting in Colorado</title>
+	<title>Rocky Mountain Safety - Oil and Gas Safety Training & Consulting in Colorado</title>
 	<meta
 		name="description"
-		content="Industrial Safety Training & Consulting Services in Colorado. Official website under construction — coming soon."
+		content="Oil and Gas Safety Training & Consulting Services in Colorado. Official website under construction — coming soon."
 	/>
 </svelte:head>
 
 <div class="relative min-h-screen bg-[rgb(22,22,22)] text-white overflow-hidden flex flex-col justify-between select-none font-sans">
-	<!-- Technical Grid Background (Low Cognitive Load) -->
+	<!-- Technical Grid Background -->
 	<div class="absolute inset-0 bg-grid-pattern opacity-50 pointer-events-none" aria-hidden="true"></div>
 
 	<!-- Top Navigation / Header -->
 	<header class="relative z-10 w-full max-w-7xl mx-auto px-6 py-6 flex items-center justify-between border-b border-zinc-800">
-		<div class="flex items-center gap-4">
-			<img src={logo} alt="Rocky Mountain Safety Logo" class="h-12 sm:h-14 w-auto object-contain" />
+		<div class="flex items-center gap-3">
+			<!-- Red Cross Logo Badge -->
+			<div class="w-10 h-10 bg-[rgb(210,47,37)] flex items-center justify-center font-black text-white text-xl relative shrink-0">
+				<span>+</span>
+			</div>
+			<div class="text-left leading-tight">
+				<span class="font-extrabold text-base tracking-tight text-white block uppercase">ROCKY MOUNTAIN SAFETY</span>
+				<span class="text-[10px] font-mono text-zinc-400 block tracking-widest uppercase">BY SAFE HANDS</span>
+			</div>
 		</div>
 		<div 
 			class="inline-flex items-center gap-2.5 px-3.5 py-1.5 bg-[rgb(210,47,37)] text-white text-xs font-bold uppercase tracking-wider min-h-[36px]"
@@ -31,18 +48,18 @@
 
 	<!-- Main Content Section -->
 	<main class="relative z-10 w-full max-w-5xl mx-auto px-6 py-12 flex-1 flex flex-col justify-center items-center text-center">
-		<div class="space-y-10 w-full">
+		<div class="space-y-12 w-full">
 			
-			<!-- Headline Block (Typographic Hierarchy) -->
+			<!-- Headline Block -->
 			<section class="space-y-4 max-w-3xl mx-auto" aria-labelledby="main-heading">
 				<div class="inline-block px-3 py-1 bg-zinc-900 border border-zinc-700 text-xs font-mono text-zinc-300 uppercase tracking-widest">
 					OFFICIAL PORTAL LAUNCH IN PROGRESS
 				</div>
 				<h1 id="main-heading" class="text-3xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight text-white leading-none">
-					INDUSTRIAL SAFETY TRAINING &amp; CONSULTING IN <span class="text-[rgb(210,47,37)]">COLORADO</span>
+					OIL AND GAS SAFETY TRAINING &amp; CONSULTING IN <span class="text-[rgb(210,47,37)]">COLORADO</span>
 				</h1>
 				<p class="text-base sm:text-lg text-zinc-400 font-normal max-w-2xl mx-auto leading-relaxed">
-					We are launching our full service portal soon. Providing comprehensive workplace safety compliance, OSHA certification, and workforce protection solutions.
+					We are launching our full service portal soon. Providing comprehensive workplace safety compliance, OSHA certification, OQ training, and workforce protection solutions.
 				</p>
 			</section>
 
@@ -68,7 +85,7 @@
 			</section>
 
 			<!-- Service Pillars (Chunking per Miller's Law) -->
-			<section class="pt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 max-w-4xl mx-auto" aria-label="Core services">
+			<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 max-w-4xl mx-auto" aria-label="Core services">
 				<div class="industrial-box p-4 text-left space-y-2 hover:border-[rgb(210,47,37)] transition-colors duration-200">
 					<div class="w-3 h-1 bg-[rgb(210,47,37)]"></div>
 					<h2 class="text-xs font-bold uppercase tracking-wider text-white">OSHA COMPLIANCE</h2>
@@ -86,8 +103,26 @@
 				</div>
 				<div class="industrial-box p-4 text-left space-y-2 hover:border-[rgb(210,47,37)] transition-colors duration-200">
 					<div class="w-3 h-1 bg-[rgb(210,47,37)]"></div>
-					<h2 class="text-xs font-bold uppercase tracking-wider text-white">EQUIPMENT &amp; PPE</h2>
-					<p class="text-[12px] text-zinc-400 leading-snug">Field workforce protection protocols.</p>
+					<h2 class="text-xs font-bold uppercase tracking-wider text-white">OQ TRAINING</h2>
+					<p class="text-[12px] text-zinc-400 leading-snug">Operator Qualification compliance.</p>
+				</div>
+			</section>
+
+			<!-- Partner & Accredited Platforms Section -->
+			<section class="pt-6 border-t border-zinc-800/80 max-w-4xl mx-auto space-y-4" aria-label="Accredited platforms and partners">
+				<div class="flex items-center justify-center gap-3">
+					<div class="h-px bg-zinc-800 flex-1"></div>
+					<span class="text-xs font-mono font-bold uppercase tracking-widest text-zinc-400">PARTNER WITH / ACCREDITED PLATFORMS</span>
+					<div class="h-px bg-zinc-800 flex-1"></div>
+				</div>
+
+				<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-2.5">
+					{#each platforms as platform}
+						<div class="industrial-box p-3 text-center hover:border-zinc-500 transition-colors duration-200 flex flex-col items-center justify-center">
+							<span class="text-xs font-bold font-mono text-white tracking-wide uppercase">{platform.name}</span>
+							<span class="text-[10px] text-zinc-500 font-mono tracking-normal mt-0.5">{platform.label}</span>
+						</div>
+					{/each}
 				</div>
 			</section>
 
@@ -104,6 +139,7 @@
 		</div>
 	</footer>
 </div>
+
 
 
 
