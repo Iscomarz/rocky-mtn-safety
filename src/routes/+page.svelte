@@ -46,18 +46,24 @@
 				</p>
 			</section>
 
-			<!-- Phone Placeholder & Direct Contact Line Card -->
-			<section class="max-w-xl mx-auto w-full" aria-label="Contact information status">
+			<!-- Direct Contact Line Card -->
+			<section class="max-w-xl mx-auto w-full" aria-label="Contact information">
 				<div class="industrial-card p-6 text-left flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
 					<div class="space-y-1">
 						<span class="text-xs uppercase font-mono tracking-wider text-zinc-400 block">DIRECT CONTACT LINE</span>
-						<span class="text-xl sm:text-2xl font-bold text-white tracking-wide block uppercase">
-							PHONE PENDING
-						</span>
+						<a 
+							href="tel:+14322312207" 
+							class="text-xl sm:text-2xl font-bold text-white hover:text-[rgb(210,47,37)] tracking-wide block uppercase transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[rgb(210,47,37)]"
+						>
+							(432) 231-2207
+						</a>
 					</div>
-					<div class="px-4 py-2 bg-zinc-900 border border-zinc-700 text-xs font-mono text-zinc-400 uppercase">
-						UPDATING RECORDS...
-					</div>
+					<a
+						href="tel:+14322312207"
+						class="px-4 py-2.5 bg-[rgb(210,47,37)] hover:bg-[rgb(235,57,47)] text-white font-mono text-xs font-bold uppercase tracking-wider transition-colors duration-200 inline-flex items-center gap-2 min-h-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+					>
+						<span>CALL US TODAY</span>
+					</a>
 				</div>
 			</section>
 
