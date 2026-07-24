@@ -1,0 +1,47 @@
+@import 'tailwindcss';
+
+@theme {
+	--color-brand-primary: rgb(210, 47, 37);
+	--color-brand-primary-hover: rgb(235, 57, 47);
+	--color-brand-dark: rgb(22, 22, 22);
+	--color-brand-darker: rgb(14, 14, 14);
+	--font-heading: 'Outfit', sans-serif;
+	--font-sans: 'Plus Jakarta Sans', sans-serif;
+}
+
+:root {
+	--brand-red: rgb(210, 47, 37);
+	--brand-dark: rgb(22, 22, 22);
+}
+
+body {
+	font-family: var(--font-sans);
+	background-color: var(--brand-dark);
+	color: #ffffff;
+	overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--font-heading);
+}
+
+/* Sharp Technical Grid Pattern */
+.bg-grid-pattern {
+	background-size: 32px 32px;
+	background-image: 
+		linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+		linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+}
+
+.industrial-card {
+	background: #1a1a1a;
+	border: 1px solid #333333;
+	border-left: 3px solid rgb(210, 47, 37);
+}
+
+.industrial-box {
+	background: #181818;
+	border: 1px solid #2e2e2e;
+}
+
+
