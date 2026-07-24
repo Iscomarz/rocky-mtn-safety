@@ -1,4 +1,5 @@
 <script lang="ts">
+	import logoOficial from '$lib/assets/Rocky-mtn-safety/logo-oficial.png';
 	import oqsgLogo from '$lib/assets/partners/oqsg.png';
 	import ewnLogo from '$lib/assets/partners/ewn.png';
 	import co811Logo from '$lib/assets/partners/co811.svg';
@@ -35,14 +36,7 @@
 	<!-- Top Navigation / Header -->
 	<header class="relative z-10 w-full max-w-7xl mx-auto px-6 py-6 flex items-center justify-between border-b border-zinc-800">
 		<div class="flex items-center gap-3">
-			<!-- Red Cross Logo Badge -->
-			<div class="w-10 h-10 bg-[rgb(210,47,37)] flex items-center justify-center font-black text-white text-xl relative shrink-0">
-				<span>+</span>
-			</div>
-			<div class="text-left leading-tight">
-				<span class="font-extrabold text-base tracking-tight text-white block uppercase">ROCKY MOUNTAIN SAFETY</span>
-				<span class="text-[10px] font-mono text-zinc-400 block tracking-widest uppercase">BY SAFE HANDS</span>
-			</div>
+			<img src={logoOficial} alt="Rocky Mountain Safety Official Logo" class="h-12 sm:h-16 w-auto object-contain bg-white/95 p-1.5 border border-zinc-700" />
 		</div>
 		<div 
 			class="inline-flex items-center gap-2.5 px-3.5 py-1.5 bg-[rgb(210,47,37)] text-white text-xs font-bold uppercase tracking-wider min-h-[36px]"
