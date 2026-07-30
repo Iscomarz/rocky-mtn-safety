@@ -23,8 +23,8 @@
 				<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
 					<div class="lg:col-span-7 space-y-3">
 						<span class="text-xs font-mono text-[rgb(210,47,37)] uppercase font-bold tracking-wider">REGIONAL FIELD FOOTPRINT</span>
-						<h1 class="text-3xl sm:text-4xl font-black uppercase text-slate-900 tracking-tight">
-							SERVICING THE <span class="text-[rgb(210,47,37)]">FOUR CORNERS ENERGY BASINS</span>
+						<h1 class="text-3xl sm:text-4xl lg:text-5xl font-extralight uppercase text-slate-900 tracking-tight font-['Outfit']">
+							SERVICING THE <span class="font-normal text-[rgb(210,47,37)]">FOUR CORNERS ENERGY BASINS</span>
 						</h1>
 						<p class="text-sm text-slate-700 leading-relaxed">
 							From our Durango headquarters, our instructors and mobile medical units cover Southwest Colorado, the San Juan Basin in New Mexico, Eastern Arizona, and Utah.

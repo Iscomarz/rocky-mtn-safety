@@ -1,5 +1,5 @@
 import { fail } from '@sveltejs/kit';
-import { Resend } from 'resend';
+import nodemailer from 'nodemailer';
 import { env } from '$env/dynamic/private';
 import type { Actions } from './$types';
 
@@ -16,7 +16,7 @@ export const actions: Actions = {
 		const preferredDate = data.get('preferredDate')?.toString().trim();
 		const message = data.get('message')?.toString().trim();
 
-		// Honeypot anti-spam check: If bot filled out the hidden field, silently exit
+		// Honeypot anti-spam check: If bot filled out the hidden field, exit silently
 		const websiteUrlHp = data.get('website_url_hp')?.toString().trim();
 		if (websiteUrlHp) {
 			console.warn('[Honeypot Triggered] Blocked automated spam submission silently.');
@@ -32,28 +32,46 @@ export const actions: Actions = {
 			});
 		}
 
-		const apiKey = env.RESEND_API_KEY;
+		const smtpHost = env.SMTP_HOST || 'smtp.gmail.com';
+		const smtpPort = parseInt(env.SMTP_PORT || '465', 10);
+		const smtpUser = env.SMTP_USER;
+		const smtpPass = env.SMTP_PASS;
 
-		if (!apiKey || apiKey === 're_your_api_key_here') {
-			console.warn('[Resend WARNING] RESEND_API_KEY is not configured in .env yet.');
+		const toAddress = env.QUOTE_RECIPIENT_EMAIL || 'L.Sanchez@RockyMtnSafety.com';
+		const ccAddress = env.QUOTE_CC_EMAIL || 'Joyce.Sanchez@SafeHandsSafety.com';
+
+		// Fallback / Demo Mode if SMTP credentials are not yet configured in .env / Vercel
+		if (!smtpUser || !smtpPass) {
+			console.warn('[Nodemailer WARNING] SMTP_USER or SMTP_PASS is not configured in environment variables.');
+			console.log('[Quote Submission Recorded in Server Logs]:', {
+				company,
+				contactName,
+				phone,
+				email,
+				serviceRequested,
+				employeeCount,
+				location,
+				preferredDate,
+				message,
+				timestamp: new Date().toISOString()
+			});
 			return {
 				success: true,
 				demoMode: true,
-				message: 'Quote request recorded locally. Add your actual RESEND_API_KEY in .env to send real emails.'
+				message: 'Quote request recorded. Configure SMTP_USER and SMTP_PASS to send live emails.'
 			};
 		}
 
-		const resend = new Resend(apiKey);
-		
-		// Resend tested sender address (onboarding@resend.dev works immediately for tests)
-		const fromAddress = env.RESEND_FROM_EMAIL || 'Rocky Mountain Safety Quotes <onboarding@resend.dev>';
-
-		// Production email routing (commented for testing):
-		// const toAddress = env.QUOTE_RECIPIENT_EMAIL || 'L.Sanchez@RockyMtnSafety.com';
-		// const ccAddress = env.QUOTE_CC_EMAIL || 'Joyce.Sanchez@SafeHandsSafety.com';
-
-		// Testing recipient override:
-		const toAddress = 'franmtz96@gmail.com';
+		// Configure Nodemailer Transporter
+		const transporter = nodemailer.createTransport({
+			host: smtpHost,
+			port: smtpPort,
+			secure: smtpPort === 465, // true for 465, false for 587 / TLS
+			auth: {
+				user: smtpUser,
+				pass: smtpPass
+			}
+		});
 
 		// Clean Industrial Light HTML Email Template
 		const emailHtml = `
@@ -171,7 +189,7 @@ export const actions: Actions = {
 											ROCKY MOUNTAIN SAFETY BY SAFE HANDS
 										</p>
 										<p style="margin: 0; font-size: 11px; color: #94a3b8;">
-											Durango, CO • Phone: (432) 231-2207 • L.Sanchez@RockyMtnSafety.com
+											Durango, CO • Phone: (970) 764-8799 • L.Sanchez@RockyMtnSafety.com
 										</p>
 									</td>
 								</tr>
@@ -186,28 +204,23 @@ export const actions: Actions = {
 		`;
 
 		try {
-			const { data: resendData, error } = await resend.emails.send({
-				from: fromAddress,
-				to: [toAddress],
-				// cc: [ccAddress],
+			const info = await transporter.sendMail({
+				from: `"Rocky Mountain Safety Web" <${smtpUser}>`,
+				to: toAddress,
+				cc: ccAddress,
 				replyTo: email,
-				subject: `[TEST Quote Request] ${company} - ${serviceRequested}`,
+				subject: `[Quote Request] ${company} - ${serviceRequested}`,
 				html: emailHtml
 			});
 
-			if (error) {
-				console.error('[Resend Error]', error);
-				return fail(500, { error: `Resend API error: ${error.message}` });
-			}
-
-			console.log('[Resend SUCCESS] Email sent! Message ID:', resendData?.id);
+			console.log('[Nodemailer SUCCESS] Email sent! Message ID:', info.messageId);
 
 			return {
 				success: true,
-				emailId: resendData?.id
+				messageId: info.messageId
 			};
 		} catch (err: any) {
-			console.error('[Resend Action Error]', err);
+			console.error('[Nodemailer Action Error]', err);
 			return fail(500, { error: err.message || 'An unexpected error occurred while sending the email.' });
 		}
 	}

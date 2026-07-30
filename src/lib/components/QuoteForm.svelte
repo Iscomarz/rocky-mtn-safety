@@ -38,10 +38,10 @@
 			<div class="inline-block px-3 py-1 bg-white border border-slate-300 text-xs font-mono text-slate-700 uppercase tracking-widest shadow-sm">
 				RAPID RESPONSE ESTIMATES
 			</div>
-			<h2 id="quote-heading" class="text-3xl sm:text-4xl font-black uppercase text-slate-900 tracking-tight">
-				REQUEST A <span class="text-[rgb(210,47,37)]">SERVICE QUOTE</span>
+			<h2 id="quote-heading" class="text-3xl sm:text-4xl font-extralight uppercase text-slate-900 tracking-tight font-['Outfit']">
+				REQUEST A <span class="font-normal text-[rgb(210,47,37)]">SERVICE QUOTE</span>
 			</h2>
-			<p class="text-sm text-slate-600 max-w-xl mx-auto">
+			<p class="text-sm text-slate-600 max-w-xl mx-auto font-light">
 				Submit your training, Operator Qualification, or mobile medical testing request. Our Durango office will follow up with scheduling and pricing details.
 			</p>
 		</div>
@@ -53,7 +53,7 @@
 					<div class="w-16 h-16 bg-emerald-100 border border-emerald-400 text-emerald-700 rounded-full flex items-center justify-center mx-auto text-2xl font-bold">
 						✓
 					</div>
-					<h3 class="text-2xl font-bold uppercase text-slate-900">QUOTE REQUEST SENT SUCCESSFULLY</h3>
+					<h3 class="text-2xl font-light uppercase text-slate-900 font-['Outfit']">QUOTE REQUEST SENT SUCCESSFULLY</h3>
 					<p class="text-sm text-slate-600 max-w-md mx-auto">
 						Thank you for contacting Rocky Mountain Safety. Our team will review your request and reach out shortly to coordinate services.
 					</p>
