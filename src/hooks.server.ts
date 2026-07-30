@@ -5,10 +5,16 @@ const BLOCKED_BOT_REGEX = /ahrefsbot|semrushbot|dotbot|mj12bot|bytespider|gptbot
 const EXPLOIT_PATH_REGEX = /\.(php|asp|aspx|jsp|cgi|env|git)$|xmlrpc|wp-admin|wp-content|wp-includes|wp-login|wp-json|\/2026\/|\/2025\/|\/2024\/|\/casino|\/kazino|\/1win|\/pin-up|\/wordpress|\/blog\/|\/admin|^\/\.env/i;
 
 export const handle: Handle = async ({ event, resolve }) => {
+	const hostname = event.url.hostname;
 	const pathname = event.url.pathname;
 	const userAgent = event.request.headers.get('user-agent') || '';
 
-	// 1. Block exploit paths at server layer
+	// 1. Force redirect direct *.vercel.app host requests to custom domain https://rockymtnsafety.com
+	if (hostname.endsWith('.vercel.app')) {
+		throw redirect(301, `https://rockymtnsafety.com${pathname}${event.url.search}`);
+	}
+
+	// 2. Block exploit paths at server layer
 	if (EXPLOIT_PATH_REGEX.test(pathname)) {
 		return new Response('403 Forbidden: Malicious path scan blocked.', {
 			status: 403,
@@ -19,7 +25,7 @@ export const handle: Handle = async ({ event, resolve }) => {
 		});
 	}
 
-	// 2. Block malicious bots & empty user-agents
+	// 3. Block malicious bots & empty user-agents
 	if (!userAgent || BLOCKED_BOT_REGEX.test(userAgent)) {
 		return new Response('403 Forbidden: Automated bot traffic blocked.', {
 			status: 403,
@@ -30,7 +36,7 @@ export const handle: Handle = async ({ event, resolve }) => {
 		});
 	}
 
-	// 3. Redirect /products to root /
+	// 4. Redirect /products to root /
 	if (pathname.startsWith('/products')) {
 		throw redirect(301, '/');
 	}

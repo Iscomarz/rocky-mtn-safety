@@ -10,10 +10,16 @@ const EXPLOIT_PATH_REGEX = /\.(php|asp|aspx|jsp|cgi|env|git)$|xmlrpc|wp-admin|wp
 
 export default function middleware(request: Request): Response | void {
 	const url = new URL(request.url);
+	const hostname = url.hostname;
 	const pathname = url.pathname;
 	const userAgent = request.headers.get('user-agent') || '';
 
-	// 1. Immediately block exploit / vulnerability scanning paths at Edge
+	// 1. Force redirect any direct *.vercel.app host traffic to custom domain (pushing bots through Cloudflare)
+	if (hostname.endsWith('.vercel.app')) {
+		return Response.redirect(`https://rockymtnsafety.com${pathname}${url.search}`, 301);
+	}
+
+	// 2. Immediately block exploit / vulnerability scanning paths at Edge
 	if (EXPLOIT_PATH_REGEX.test(pathname)) {
 		return new Response('403 Forbidden: Malicious path scan blocked.', {
 			status: 403,
@@ -24,7 +30,7 @@ export default function middleware(request: Request): Response | void {
 		});
 	}
 
-	// 2. Block known malicious scrapers and bot user-agents
+	// 3. Block known malicious scrapers and bot user-agents
 	if (!userAgent || BLOCKED_BOT_REGEX.test(userAgent)) {
 		return new Response('403 Forbidden: Automated bot traffic blocked.', {
 			status: 403,
