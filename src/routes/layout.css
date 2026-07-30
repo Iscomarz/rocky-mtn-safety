@@ -11,13 +11,13 @@
 
 :root {
 	--brand-red: rgb(210, 47, 37);
-	--brand-dark: rgb(22, 22, 22);
+	--brand-canvas: #f8f9fa;
 }
 
 body {
 	font-family: var(--font-sans);
-	background-color: var(--brand-dark);
-	color: #ffffff;
+	background-color: #f8f9fa;
+	color: #0f172a;
 	overflow-x: hidden;
 }
 
@@ -25,23 +25,45 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: var(--font-heading);
 }
 
-/* Sharp Technical Grid Pattern */
+/* Technical Grid Pattern for Light Canvas */
 .bg-grid-pattern {
 	background-size: 32px 32px;
 	background-image: 
-		linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-		linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+		linear-gradient(to right, rgba(15, 23, 42, 0.05) 1px, transparent 1px),
+		linear-gradient(to bottom, rgba(15, 23, 42, 0.05) 1px, transparent 1px);
 }
 
 .industrial-card {
-	background: #1a1a1a;
-	border: 1px solid #333333;
-	border-left: 3px solid rgb(210, 47, 37);
+	background: #ffffff;
+	border: 1px solid #e2e8f0;
+	border-left: 4px solid rgb(210, 47, 37);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .industrial-box {
-	background: #181818;
-	border: 1px solid #2e2e2e;
+	background: #ffffff;
+	border: 1px solid #e2e8f0;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
 }
+
+/* Smooth Route & Page View Transitions */
+@keyframes fade-in {
+	from { opacity: 0; transform: translateY(4px); }
+	to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-out {
+	from { opacity: 1; transform: translateY(0); }
+	to { opacity: 0; transform: translateY(-4px); }
+}
+
+::view-transition-old(root) {
+	animation: 180ms cubic-bezier(0.4, 0, 1, 1) both fade-out;
+}
+
+::view-transition-new(root) {
+	animation: 220ms cubic-bezier(0, 0, 0.2, 1) 40ms both fade-in;
+}
+
 
 
