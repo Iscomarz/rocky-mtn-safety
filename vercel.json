@@ -21,7 +21,22 @@
 			"permanent": true
 		},
 		{
+			"source": "/2026/:path*",
+			"destination": "/",
+			"permanent": true
+		},
+		{
 			"source": "/wp-:path*",
+			"destination": "/",
+			"permanent": true
+		},
+		{
+			"source": "/.env:path*",
+			"destination": "/",
+			"permanent": true
+		},
+		{
+			"source": "/.git:path*",
 			"destination": "/",
 			"permanent": true
 		}

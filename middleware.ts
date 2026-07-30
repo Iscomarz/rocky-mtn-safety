@@ -5,8 +5,8 @@ export const config = {
 // Known malicious bot User-Agent signatures & scrapers
 const BLOCKED_BOT_REGEX = /ahrefsbot|semrushbot|dotbot|mj12bot|bytespider|gptbot|claudebot|ccbot|scrapy|python-requests|go-http-client|curl\/|wget\/|libwww-perl|zgrab|censys|nmap|sqlmap|nikto|masscan|eval|passthrough/i;
 
-// Known exploit and spam scanning path patterns
-const EXPLOIT_PATH_REGEX = /\.(php|asp|aspx|jsp|cgi)$|xmlrpc|wp-admin|wp-content|wp-includes|wp-login|wp-json|\/2025\/|\/2024\/|\/casino|\/wordpress|\/blog\/|\/admin/i;
+// Known exploit and spam scanning path patterns (.env, .git, 2026/..., kazino, casino, wp-...)
+const EXPLOIT_PATH_REGEX = /\.(php|asp|aspx|jsp|cgi|env|git)$|xmlrpc|wp-admin|wp-content|wp-includes|wp-login|wp-json|\/2026\/|\/2025\/|\/2024\/|\/casino|\/kazino|\/1win|\/pin-up|\/wordpress|\/blog\/|\/admin|^\/\.env/i;
 
 export default function middleware(request: Request): Response | void {
 	const url = new URL(request.url);

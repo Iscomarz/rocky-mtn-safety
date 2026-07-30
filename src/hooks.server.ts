@@ -2,7 +2,7 @@ import { redirect, type Handle } from '@sveltejs/kit';
 
 const BLOCKED_BOT_REGEX = /ahrefsbot|semrushbot|dotbot|mj12bot|bytespider|gptbot|claudebot|ccbot|scrapy|python-requests|go-http-client|curl\/|wget\/|libwww-perl|zgrab|censys|nmap|sqlmap|nikto|masscan|eval|passthrough/i;
 
-const EXPLOIT_PATH_REGEX = /\.(php|asp|aspx|jsp|cgi)$|xmlrpc|wp-admin|wp-content|wp-includes|wp-login|wp-json|\/2025\/|\/2024\/|\/casino|\/wordpress|\/blog\/|\/admin/i;
+const EXPLOIT_PATH_REGEX = /\.(php|asp|aspx|jsp|cgi|env|git)$|xmlrpc|wp-admin|wp-content|wp-includes|wp-login|wp-json|\/2026\/|\/2025\/|\/2024\/|\/casino|\/kazino|\/1win|\/pin-up|\/wordpress|\/blog\/|\/admin|^\/\.env/i;
 
 export const handle: Handle = async ({ event, resolve }) => {
 	const pathname = event.url.pathname;
