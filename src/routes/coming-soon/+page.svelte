@@ -53,7 +53,7 @@
 
 <div class="relative min-h-screen bg-[rgb(22,22,22)] text-white overflow-hidden flex flex-col justify-between select-none font-sans">
 	<!-- Technical Grid Background -->
-	<div class="absolute inset-0 bg-grid-pattern opacity-50 pointer-events-none" aria-hidden="true"></div>
+	<div class="absolute inset-0 bg-grid-pattern opacity-10 pointer-events-none" aria-hidden="true"></div>
 
 	<!-- Top Navigation / Header -->
 	<header class="relative z-10 w-full max-w-7xl mx-auto px-6 py-6 flex items-center justify-between border-b border-zinc-800">
@@ -89,7 +89,7 @@
 
 			<!-- Direct Contact Line Card -->
 			<section class="max-w-xl mx-auto w-full" aria-label="Contact information">
-				<div class="industrial-card p-6 text-left flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+				<div class="bg-zinc-900/90 border border-zinc-800 border-l-4 border-l-[rgb(210,47,37)] p-6 text-left flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-xl">
 					<div class="space-y-1">
 						<span class="text-xs uppercase font-mono tracking-wider text-zinc-400 block">DIRECT CONTACT LINE</span>
 						<a 
@@ -108,31 +108,31 @@
 				</div>
 			</section>
 
-			<!-- Service Pillars (Chunking per Miller's Law) -->
+			<!-- Service Pillars -->
 			<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 max-w-4xl mx-auto" aria-label="Core services">
-				<div class="industrial-box p-4 text-left space-y-2 hover:border-[rgb(210,47,37)] transition-colors duration-200">
+				<div class="bg-zinc-900/80 border border-zinc-800 p-4 text-left space-y-2 hover:border-[rgb(210,47,37)] transition-colors duration-200">
 					<div class="w-3 h-1 bg-[rgb(210,47,37)]"></div>
 					<h2 class="text-xs font-bold uppercase tracking-wider text-white">OSHA COMPLIANCE</h2>
 					<p class="text-[12px] text-zinc-400 leading-snug">Certification &amp; safety standards consulting.</p>
 				</div>
-				<div class="industrial-box p-4 text-left space-y-2 hover:border-[rgb(210,47,37)] transition-colors duration-200">
+				<div class="bg-zinc-900/80 border border-zinc-800 p-4 text-left space-y-2 hover:border-[rgb(210,47,37)] transition-colors duration-200">
 					<div class="w-3 h-1 bg-[rgb(210,47,37)]"></div>
 					<h2 class="text-xs font-bold uppercase tracking-wider text-white">HAZARD CONTROL</h2>
 					<p class="text-[12px] text-zinc-400 leading-snug">Workplace risk assessment &amp; audits.</p>
 				</div>
-				<div class="industrial-box p-4 text-left space-y-2 hover:border-[rgb(210,47,37)] transition-colors duration-200">
+				<div class="bg-zinc-900/80 border border-zinc-800 p-4 text-left space-y-2 hover:border-[rgb(210,47,37)] transition-colors duration-200">
 					<div class="w-3 h-1 bg-[rgb(210,47,37)]"></div>
 					<h2 class="text-xs font-bold uppercase tracking-wider text-white">SAFETY SOLUTIONS</h2>
 					<p class="text-[12px] text-zinc-400 leading-snug">Custom industrial program development.</p>
 				</div>
-				<div class="industrial-box p-4 text-left space-y-2 hover:border-[rgb(210,47,37)] transition-colors duration-200">
+				<div class="bg-zinc-900/80 border border-zinc-800 p-4 text-left space-y-2 hover:border-[rgb(210,47,37)] transition-colors duration-200">
 					<div class="w-3 h-1 bg-[rgb(210,47,37)]"></div>
 					<h2 class="text-xs font-bold uppercase tracking-wider text-white">OQ TRAINING</h2>
 					<p class="text-[12px] text-zinc-400 leading-snug">Operator Qualification compliance.</p>
 				</div>
 			</section>
 
-			<!-- Partner & Accredited Platforms Section (Multi-item Carousel Slider) -->
+			<!-- Partner & Accredited Platforms Section -->
 			<section 
 				class="pt-6 border-t border-zinc-800/80 max-w-5xl mx-auto space-y-4" 
 				aria-label="Accredited platforms and partners carousel"
@@ -155,7 +155,7 @@
 						‹
 					</button>
 
-					<!-- Slider Content Window: 4 items on desktop, 3 on tablet, 2 on mobile -->
+					<!-- Slider Content Window -->
 					<div class="flex-1 overflow-hidden">
 						<div 
 							class="flex transition-transform duration-500 ease-in-out gap-3"
@@ -163,7 +163,7 @@
 						>
 							{#each [...platforms, ...platforms] as platform, idx}
 								<div class="w-[calc(50%-6px)] sm:w-[calc(33.333%-8px)] md:w-[calc(25%-9px)] shrink-0">
-									<div class="p-3 text-center flex flex-col items-center justify-center h-[95px] space-y-1.5">
+									<div class="p-3 text-center flex flex-col items-center justify-center h-[95px] space-y-1.5 bg-zinc-900/60 border border-zinc-800/80">
 										{#if platform.logo}
 											<img src={platform.logo} alt="{platform.name} logo" class="h-8 sm:h-9 w-auto max-w-[130px] object-contain opacity-90 hover:opacity-100 transition-opacity" />
 										{/if}
