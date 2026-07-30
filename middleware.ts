@@ -2,11 +2,30 @@ export const config = {
 	matcher: ['/((?!_next|static|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp|css|js)$).*)']
 };
 
+// Known malicious bot User-Agent signatures & scrapers
+const BLOCKED_BOT_REGEX = /ahrefsbot|semrushbot|dotbot|mj12bot|bytespider|gptbot|claudebot|ccbot|scrapy|python-requests|go-http-client|curl\/|wget\/|libwww-perl|zgrab|censys|nmap|sqlmap|nikto|masscan|eval|passthrough/i;
+
+// Known exploit and spam scanning path patterns
+const EXPLOIT_PATH_REGEX = /\.(php|asp|aspx|jsp|cgi)$|xmlrpc|wp-admin|wp-content|wp-includes|wp-login|wp-json|\/2025\/|\/2024\/|\/casino|\/wordpress|\/blog\/|\/admin/i;
+
 export default function middleware(request: Request): Response | void {
+	const url = new URL(request.url);
+	const pathname = url.pathname;
 	const userAgent = request.headers.get('user-agent') || '';
 
-	// Block AhrefsBot automated crawling attempts at Vercel Edge Layer
-	if (/ahrefsbot/i.test(userAgent)) {
+	// 1. Immediately block exploit / vulnerability scanning paths at Edge
+	if (EXPLOIT_PATH_REGEX.test(pathname)) {
+		return new Response('403 Forbidden: Malicious path scan blocked.', {
+			status: 403,
+			headers: {
+				'Content-Type': 'text/plain',
+				'Cache-Control': 'no-store, max-age=0'
+			}
+		});
+	}
+
+	// 2. Block known malicious scrapers and bot user-agents
+	if (!userAgent || BLOCKED_BOT_REGEX.test(userAgent)) {
 		return new Response('403 Forbidden: Automated bot traffic blocked.', {
 			status: 403,
 			headers: {

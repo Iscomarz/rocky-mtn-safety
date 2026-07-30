@@ -4,6 +4,26 @@
 			"source": "/products/:path*",
 			"destination": "/",
 			"permanent": true
+		},
+		{
+			"source": "/xmlrpc.php",
+			"destination": "/",
+			"permanent": true
+		},
+		{
+			"source": "/:path*.php",
+			"destination": "/",
+			"permanent": true
+		},
+		{
+			"source": "/2025/:path*",
+			"destination": "/",
+			"permanent": true
+		},
+		{
+			"source": "/wp-:path*",
+			"destination": "/",
+			"permanent": true
 		}
 	]
 }
