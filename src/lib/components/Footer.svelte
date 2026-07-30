@@ -12,7 +12,7 @@
 					<img src={logoOficial} alt="Rocky Mountain Safety Official Logo" class="h-14 w-auto object-contain" />
 				</a>
 				<p class="text-xs text-zinc-400 leading-relaxed">
-					Providing certified safety training, Operator Qualification (OQ) evaluations, and mobile occupational health testing across Southwest Colorado and the Four Corners Region.
+					Providing certified safety training, Operator Qualification (OQ) evaluations, and mobile occupational health testing across Durango and the Four Corners Region.
 				</p>
 				<p class="text-xs font-bold text-white uppercase italic">
 					"ADVICE you can rely on. STRATEGIES that work. EXPERTS who've been there."
@@ -33,38 +33,43 @@
 				</ul>
 			</div>
 
-			<!-- Column 3: Service Region -->
+			<!-- Column 3: Office Address & Hours -->
 			<div class="space-y-3 font-mono text-xs">
-				<h4 class="font-bold text-white uppercase tracking-wider text-xs border-b border-zinc-800 pb-2">FOUR CORNERS COVERAGE</h4>
-				<ul class="space-y-2 uppercase">
-					<li>Durango, Colorado (HQ)</li>
-					<li>Southwest Colorado Basins</li>
-					<li>San Juan Basin, New Mexico</li>
-					<li>Northern &amp; Eastern Arizona</li>
-					<li>Southeastern Utah</li>
-					<li class="pt-1 text-[11px] text-[rgb(210,47,37)]">Mobile Units Deliver On-Site</li>
-				</ul>
-			</div>
-
-			<!-- Column 4: Direct Contact -->
-			<div class="space-y-3 font-mono text-xs">
-				<h4 class="font-bold text-white uppercase tracking-wider text-xs border-b border-zinc-800 pb-2">DIRECT CONTACT</h4>
+				<h4 class="font-bold text-white uppercase tracking-wider text-xs border-b border-zinc-800 pb-2">DURANGO OFFICE &amp; HOURS</h4>
 				<div class="space-y-2">
 					<div>
-						<span class="text-[10px] text-zinc-500 uppercase block">PHONE LINE</span>
-						<a href="tel:+14322312207" class="text-sm font-bold text-white hover:text-[rgb(210,47,37)] transition-colors block">
-							(432) 231-2207
-						</a>
+						<span class="text-[10px] text-zinc-500 uppercase block">LOCATION</span>
+						<span class="text-xs text-zinc-300 block">858 Main St, Unit 203</span>
+						<span class="text-xs text-zinc-300 block">Durango, Colorado 81301</span>
 					</div>
+					<div class="pt-1">
+						<span class="text-[10px] text-zinc-500 uppercase block">BUSINESS HOURS</span>
+						<span class="text-xs text-zinc-300 block">Mon–Fri: 8:00 AM – 4:00 PM</span>
+						<span class="text-[11px] text-[rgb(210,47,37)] block">After-hours &amp; weekends by appt</span>
+					</div>
+				</div>
+			</div>
+
+			<!-- Column 4: Direct Contacts -->
+			<div class="space-y-3 font-mono text-xs">
+				<h4 class="font-bold text-white uppercase tracking-wider text-xs border-b border-zinc-800 pb-2">DIRECT CONTACTS</h4>
+				<div class="space-y-2.5">
 					<div>
-						<span class="text-[10px] text-zinc-500 uppercase block">EMAIL INQUIRIES</span>
-						<a href="mailto:L.Sanchez@RockyMtnSafety.com" class="text-xs text-zinc-300 hover:text-white transition-colors block">
+						<span class="text-[10px] text-zinc-500 uppercase block">DURANGO LOCAL CONTACT</span>
+						<span class="text-xs font-semibold text-zinc-300 block">Lori Sanchez</span>
+						<a href="tel:+19707648799" class="text-xs font-bold text-white hover:text-[rgb(210,47,37)] transition-colors block">
+							(970) 764-8799
+						</a>
+						<a href="mailto:L.Sanchez@RockyMtnSafety.com" class="text-[11px] text-zinc-400 hover:text-white transition-colors block">
 							L.Sanchez@RockyMtnSafety.com
 						</a>
 					</div>
-					<div>
-						<span class="text-[10px] text-zinc-500 uppercase block">PARENT NETWORK</span>
-						<span class="text-xs text-zinc-400 block">Safe Hands Safety</span>
+					<div class="pt-1 border-t border-zinc-800/80">
+						<span class="text-[10px] text-zinc-500 uppercase block">MAIN OFFICE / SAFE HANDS</span>
+						<span class="text-xs font-semibold text-zinc-300 block">Joyce Sanchez</span>
+						<a href="tel:+14322312207" class="text-xs font-bold text-white hover:text-[rgb(210,47,37)] transition-colors block">
+							(432) 231-2207
+						</a>
 					</div>
 				</div>
 			</div>

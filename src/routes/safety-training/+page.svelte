@@ -64,8 +64,8 @@
 					<div class="inline-block px-3 py-1 bg-white border border-slate-300 text-xs font-mono text-slate-700 uppercase tracking-widest shadow-sm">
 						BILINGUAL INDUSTRIAL INSTRUCTION
 					</div>
-					<h1 class="text-3xl sm:text-5xl font-black uppercase text-slate-900 tracking-tight">
-						SAFETY TRAINING <span class="text-[rgb(210,47,37)]">COURSES</span>
+					<h1 class="text-3xl sm:text-5xl font-extralight uppercase text-slate-900 tracking-tight font-['Outfit']">
+						SAFETY TRAINING <span class="font-normal text-[rgb(210,47,37)]">COURSES</span>
 					</h1>
 					<p class="text-base text-slate-700 leading-relaxed">
 						Delivering industry-recognized safety certifications for pipeline, oilfield, construction, and mining workforces. Instructed fluently in English and Spanish.

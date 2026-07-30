@@ -27,10 +27,10 @@
 			<div class="inline-block px-3 py-1 bg-slate-100 border border-slate-300 text-xs font-mono text-slate-700 uppercase tracking-widest">
 				YOUR TRUSTED SAFETY PARTNER
 			</div>
-			<h2 id="why-heading" class="text-3xl sm:text-4xl font-black uppercase text-slate-900 tracking-tight">
-				WHY CHOOSE <span class="text-[rgb(210,47,37)]">ROCKY MOUNTAIN SAFETY</span>
+			<h2 id="why-heading" class="text-3xl sm:text-4xl font-extralight uppercase text-slate-900 tracking-tight font-['Outfit']">
+				WHY CHOOSE <span class="font-normal text-[rgb(210,47,37)]">ROCKY MOUNTAIN SAFETY</span>
 			</h2>
-			<p class="text-base text-slate-600">
+			<p class="text-base text-slate-600 font-light">
 				Combining deep local Four Corners roots with national safety network expertise.
 			</p>
 		</div>
@@ -39,19 +39,19 @@
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 			{#each advantages as adv}
 				<div class="industrial-card p-6 space-y-2 border-l-4 border-l-[rgb(210,47,37)]">
-					<h3 class="text-lg font-bold uppercase text-slate-900 tracking-tight">{adv.title}</h3>
-					<p class="text-xs text-slate-600 leading-relaxed">{adv.desc}</p>
+					<h3 class="text-lg font-light uppercase text-slate-900 tracking-tight font-['Outfit']">{adv.title}</h3>
+					<p class="text-xs text-slate-600 leading-relaxed font-light">{adv.desc}</p>
 				</div>
 			{/each}
 		</div>
 
 		<!-- Motto Showcase Banner -->
 		<div class="industrial-box p-8 bg-slate-900 text-white text-center space-y-3">
-			<span class="text-xs font-mono text-[rgb(210,47,37)] uppercase font-bold tracking-widest">COMPANY PHILOSOPHY</span>
-			<h3 class="text-xl sm:text-2xl font-black uppercase tracking-wide">
+			<span class="text-xs font-mono text-[rgb(210,47,37)] uppercase font-semibold tracking-widest">COMPANY PHILOSOPHY</span>
+			<h3 class="text-xl sm:text-2xl font-light uppercase tracking-wide font-['Outfit'] text-white">
 				"ADVICE YOU CAN RELY ON. STRATEGIES THAT WORK. EXPERTS WHO'VE BEEN THERE."
 			</h3>
-			<p class="text-xs text-slate-300 max-w-xl mx-auto">
+			<p class="text-xs text-slate-300 max-w-xl mx-auto font-light">
 				We don't just check boxes — we deliver practical, field-proven safety solutions that keep your workers safe and your operations compliant.
 			</p>
 		</div>

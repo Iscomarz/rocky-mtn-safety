@@ -2,10 +2,6 @@
 	import Header from '$lib/components/Header.svelte';
 	import Hero from '$lib/components/Hero.svelte';
 	import PartnerSlider from '$lib/components/PartnerSlider.svelte';
-	import Services from '$lib/components/Services.svelte';
-	import WhyChooseUs from '$lib/components/WhyChooseUs.svelte';
-	import ServiceArea from '$lib/components/ServiceArea.svelte';
-	import QuoteForm from '$lib/components/QuoteForm.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 </script>
 
@@ -22,10 +18,6 @@
 	<main>
 		<Hero />
 		<PartnerSlider />
-		<Services />
-		<WhyChooseUs />
-		<ServiceArea />
-		<QuoteForm />
 	</main>
 	<Footer />
 </div>
