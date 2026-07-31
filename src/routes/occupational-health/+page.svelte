@@ -89,14 +89,6 @@
 					</p>
 				</div>
 			</div>
-
-			<!-- Visual Recommendation Box -->
-			<div class="industrial-box p-6 border-l-4 border-l-amber-500 bg-amber-50/50 space-y-2">
-				<span class="text-xs font-mono font-bold uppercase text-amber-800 block">💡 SUGGESTION FOR ADDITIONAL ASSETS</span>
-				<p class="text-xs text-amber-900 leading-relaxed">
-					If you have real photos of your <strong>Mobile Testing Van / Collection Trailer</strong> or <strong>Respirator Fit Testing Setup (PortaCount/N95 Hoods)</strong>, pass them over to us and we can embed them right inside these cards for maximum visual authenticity!
-				</p>
-			</div>
 		</div>
 
 		<div class="pt-16">
