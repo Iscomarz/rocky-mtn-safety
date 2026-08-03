@@ -13,6 +13,7 @@ export default function middleware(request: Request): Response | void {
 	const hostname = url.hostname;
 	const pathname = url.pathname;
 	const userAgent = request.headers.get('user-agent') || '';
+	const method = request.method;
 
 	// 1. Force redirect any direct *.vercel.app host traffic to custom domain (pushing bots through Cloudflare)
 	if (hostname.endsWith('.vercel.app')) {
@@ -34,6 +35,17 @@ export default function middleware(request: Request): Response | void {
 	if (!userAgent || BLOCKED_BOT_REGEX.test(userAgent)) {
 		return new Response('403 Forbidden: Automated bot traffic blocked.', {
 			status: 403,
+			headers: {
+				'Content-Type': 'text/plain',
+				'Cache-Control': 'no-store, max-age=0'
+			}
+		});
+	}
+
+	// 4. Block invalid POST requests to non-form routes (e.g. POST /) at Edge to save serverless function invocations
+	if (method === 'POST' && pathname !== '/quote') {
+		return new Response('405 Method Not Allowed', {
+			status: 405,
 			headers: {
 				'Content-Type': 'text/plain',
 				'Cache-Control': 'no-store, max-age=0'
