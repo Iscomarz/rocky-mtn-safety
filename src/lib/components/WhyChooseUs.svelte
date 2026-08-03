@@ -49,7 +49,7 @@
 		<div class="industrial-box p-8 bg-slate-900 text-white text-center space-y-3">
 			<span class="text-xs font-mono text-[rgb(210,47,37)] uppercase font-semibold tracking-widest">COMPANY PHILOSOPHY</span>
 			<h3 class="text-xl sm:text-2xl font-light uppercase tracking-wide font-['Outfit'] text-white">
-				"ADVICE YOU CAN RELY ON. STRATEGIES THAT WORK. EXPERTS WHO'VE BEEN THERE."
+				"ADVICE. YOU CAN RELY ON. STRATEGIES. THAT WORK. EXPERTS. WHOVE BEEN THERE."
 			</h3>
 			<p class="text-xs text-slate-300 max-w-xl mx-auto font-light">
 				We don't just check boxes — we deliver practical, field-proven safety solutions that keep your workers safe and your operations compliant.

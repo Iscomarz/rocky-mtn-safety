@@ -67,7 +67,7 @@
 					<div class="w-1.5 h-8 bg-slate-500 shrink-0"></div>
 					<div>
 						<span class="text-xs font-mono font-semibold uppercase text-white block tracking-wider">OUR MOTTO</span>
-						<span class="text-xs text-slate-300 font-light italic">ADVICE you can rely on. EXPERTS who've been there.</span>
+						<span class="text-xs text-slate-300 font-light italic">ADVICE. You can rely on. STRATEGIES. That work. EXPERTS. Whove been there.</span>
 					</div>
 				</div>
 			</div>

@@ -1,6 +1,9 @@
 <script lang="ts">
 	import Header from '$lib/components/Header.svelte';
 	import Hero from '$lib/components/Hero.svelte';
+	import Services from '$lib/components/Services.svelte';
+	import WhyChooseUs from '$lib/components/WhyChooseUs.svelte';
+	import ServiceArea from '$lib/components/ServiceArea.svelte';
 	import PartnerSlider from '$lib/components/PartnerSlider.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 </script>
@@ -17,6 +20,9 @@
 	<Header />
 	<main>
 		<Hero />
+		<Services />
+		<WhyChooseUs />
+		<ServiceArea />
 		<PartnerSlider />
 	</main>
 	<Footer />

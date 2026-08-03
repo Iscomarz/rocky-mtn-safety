@@ -25,7 +25,7 @@
 					<div class="lg:col-span-7 space-y-3">
 						<span class="text-xs font-mono text-[rgb(210,47,37)] uppercase font-bold tracking-wider">OUR FIELD EXPERIENCE</span>
 						<h1 class="text-3xl sm:text-4xl lg:text-5xl font-extralight uppercase text-slate-900 tracking-tight font-['Outfit']">
-							ADVICE YOU CAN RELY ON. <br /><span class="font-normal text-[rgb(210,47,37)]">EXPERTS WHO'VE BEEN THERE.</span>
+							ADVICE. YOU CAN RELY ON. STRATEGIES. THAT WORK. <br /><span class="font-normal text-[rgb(210,47,37)]">EXPERTS. WHOVE BEEN THERE.</span>
 						</h1>
 						<p class="text-sm text-slate-700 leading-relaxed">
 							Rocky Mountain Safety by Safe Hands delivers local expertise and national standards across Durango, Southwest Colorado, New Mexico, Arizona, and Utah.

@@ -2,7 +2,7 @@
 
 ## 1. Brand Identity & Vision
 - **Brand Name**: Rocky Mountain Safety by Safe Hands
-- **Motto**: *"ADVICE. You can rely on. STRATEGIES. That work. EXPERTS. Who’ve been there."*
+- **Motto**: *"ADVICE. You can rely on. STRATEGIES. That work. EXPERTS. Whove been there."*
 - **Target Audience**: Field personnel, safety managers, HR directors, and oil & gas / industrial contractors in the Four Corners region (Durango, CO, NM, UT, AZ).
 - **Core Value Proposition**: Practical, accessible, and mobile-ready safety training, operator qualification (OQ), and occupational health testing.
 

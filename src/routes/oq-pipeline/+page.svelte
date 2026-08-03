@@ -32,12 +32,20 @@
 					<p class="text-base text-slate-700 leading-relaxed">
 						Comprehensive evaluation, covered task verification, and contractor compliance management for energy and utility employers throughout the Four Corners Region.
 					</p>
-					<div class="pt-2">
+					<div class="pt-2 flex flex-wrap items-center gap-3">
 						<a
 							href="/quote"
 							class="inline-block px-8 py-3.5 bg-[rgb(210,47,37)] hover:bg-[rgb(235,57,47)] text-white font-mono text-xs font-bold uppercase tracking-wider transition-colors shadow-md"
 						>
 							REQUEST OQ EVALUATION
+						</a>
+						<a
+							href="https://www.needoq.com"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="inline-block px-6 py-3.5 bg-slate-900 hover:bg-slate-800 text-white font-mono text-xs font-bold uppercase tracking-wider transition-colors shadow-md"
+						>
+							MORE OQ GUIDANCE (NEEDOQ.COM) →
 						</a>
 					</div>
 				</div>

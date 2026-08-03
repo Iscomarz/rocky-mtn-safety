@@ -15,7 +15,7 @@
 					Providing certified safety training, Operator Qualification (OQ) evaluations, and mobile occupational health testing across Durango and the Four Corners Region.
 				</p>
 				<p class="text-xs font-bold text-white uppercase italic">
-					"ADVICE you can rely on. STRATEGIES that work. EXPERTS who've been there."
+					"ADVICE. You can rely on. STRATEGIES. That work. EXPERTS. Whove been there."
 				</p>
 			</div>
 

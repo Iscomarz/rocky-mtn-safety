@@ -20,7 +20,7 @@ Provide practical, accessible, and mobile-ready safety training, operator qualif
 
 ## Positioning
 
-Local Durango, CO expertise by "Rocky Mountain Safety by Safe Hands" with mobile testing brought directly to the job site. Motto: *"ADVICE. You can rely on. STRATEGIES. That work. EXPERTS. Who’ve been there."*
+Local Durango, CO expertise by "Rocky Mountain Safety by Safe Hands" with mobile testing brought directly to the job site. Motto: *"ADVICE. You can rely on. STRATEGIES. That work. EXPERTS. Whove been there."*
 
 ## Operating Context
 
@@ -38,7 +38,7 @@ Field personnel and safety managers needing rapid on-site compliance, OQ verific
 ## Brand Commitments
 
 - Brand Name: Rocky Mountain Safety by Safe Hands
-- Motto: *"ADVICE. You can rely on. STRATEGIES. That work. EXPERTS. Who’ve been there."*
+- Motto: *"ADVICE. You can rely on. STRATEGIES. That work. EXPERTS. Whove been there."*
 - Palette: Industrial Safety Red (`#D22F25`), Deep Slate (`#0F172A`), Light Canvas (`#F8F9FA`).
 
 ## Evidence on Hand
