@@ -5,7 +5,6 @@
 	import WhyChooseUs from '$lib/components/WhyChooseUs.svelte';
 	import ServiceArea from '$lib/components/ServiceArea.svelte';
 	import PartnerSlider from '$lib/components/PartnerSlider.svelte';
-	import Faq from '$lib/components/Faq.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 </script>
 
@@ -25,7 +24,6 @@
 		<WhyChooseUs />
 		<ServiceArea />
 		<PartnerSlider />
-		<Faq />
 	</main>
 	<Footer />
 </div>

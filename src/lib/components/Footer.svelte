@@ -59,6 +59,7 @@
 					<li><a href="/occupational-health" class="hover:text-[rgb(210,47,37)] transition-colors">Occupational Health & Mobile Testing</a></li>
 					<li><a href="/about" class="hover:text-[rgb(210,47,37)] transition-colors">About Us</a></li>
 					<li><a href="/service-area" class="hover:text-[rgb(210,47,37)] transition-colors">Four Corners Service Area</a></li>
+					<li><a href="/faq" class="hover:text-[rgb(210,47,37)] transition-colors">FAQ</a></li>
 					<li><a href="/quote" class="hover:text-[rgb(210,47,37)] transition-colors">Request a Quote</a></li>
 				</ul>
 			</div>

@@ -2,7 +2,7 @@
 	import heroBg from '$lib/backgrounds/pexels-kindelmedia-8487720.jpg';
 </script>
 
-<section id="hero" class="relative min-h-[85vh] flex items-center py-16 sm:py-24 border-b border-slate-800 bg-slate-950 text-white overflow-hidden" aria-labelledby="hero-title">
+<section id="hero" class="relative min-h-[calc(100svh-4.5rem)] lg:min-h-[calc(100vh-5rem)] flex items-center py-6 sm:py-10 lg:py-12 border-b border-slate-800 bg-slate-950 text-white overflow-hidden" aria-labelledby="hero-title">
 	<!-- Background Image (Full Width & Height, Visible & Vibrant) -->
 	<img
 		src={heroBg}
@@ -18,29 +18,29 @@
 	<div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-slate-950/30" aria-hidden="true"></div>
 
 	<div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 w-full">
-		<div class="max-w-3xl space-y-8 text-left">
+		<div class="max-w-3xl space-y-4 sm:space-y-5 lg:space-y-6 text-left">
 			
 			<!-- Location & Status Badge -->
-			<div class="inline-flex items-center gap-2.5 px-4 py-1.5 bg-slate-900/80 backdrop-blur-md border border-slate-700/60 text-xs font-mono text-slate-200 uppercase tracking-widest shadow-lg">
+			<div class="inline-flex items-center gap-2.5 px-3.5 py-1 bg-slate-900/80 backdrop-blur-md border border-slate-700/60 text-xs font-mono text-slate-200 uppercase tracking-widest shadow-lg">
 				<span class="w-2 h-2 rounded-full bg-[rgb(210,47,37)] animate-pulse"></span>
 				<span>DURANGO, CO • SERVING THE FOUR CORNERS REGION</span>
 			</div>
 
 			<!-- Main Title with Fine, Elegant Typography -->
-			<h1 id="hero-title" class="text-4xl sm:text-6xl lg:text-7xl font-extralight uppercase tracking-tight text-white leading-[1.1] font-['Outfit']">
+			<h1 id="hero-title" class="text-3xl sm:text-5xl lg:text-6xl font-extralight uppercase tracking-tight text-white leading-[1.1] font-['Outfit']">
 				SAFETY, TRAINING &amp; OCCUPATIONAL HEALTH FOR THE <span class="font-normal text-[rgb(210,47,37)]">FOUR CORNERS</span>
 			</h1>
 
 			<!-- Subtitle -->
-			<p class="text-lg sm:text-xl text-slate-300 font-light leading-relaxed max-w-2xl font-['Plus_Jakarta_Sans']">
+			<p class="text-sm sm:text-base lg:text-lg text-slate-300 font-light leading-relaxed max-w-2xl font-['Plus_Jakarta_Sans']">
 				Rocky Mountain Safety by Safe Hands helps pipeline, oil &amp; gas, construction, mining, and industrial employers train their workforce, verify qualifications, and bring essential health services directly to the job site.
 			</p>
 
-			<!-- Action Buttons -->
-			<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
+			<!-- Action Buttons (Visible Above the Fold) -->
+			<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-1 sm:pt-2">
 				<a
 					href="/quote"
-					class="px-9 py-4 bg-[rgb(210,47,37)] hover:bg-[rgb(235,57,47)] text-white font-mono text-sm font-semibold uppercase tracking-wider transition-all duration-200 inline-flex items-center justify-center gap-3 min-h-[52px] shadow-lg shadow-red-950/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+					class="px-7 py-3.5 sm:px-8 sm:py-4 bg-[rgb(210,47,37)] hover:bg-[rgb(235,57,47)] text-white font-mono text-xs sm:text-sm font-semibold uppercase tracking-wider transition-all duration-200 inline-flex items-center justify-center gap-2.5 shadow-lg shadow-red-950/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white cursor-pointer"
 				>
 					<span>REQUEST A QUOTE</span>
 					<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -50,24 +50,24 @@
 
 				<a
 					href="/safety-training"
-					class="px-9 py-4 bg-slate-900/90 hover:bg-slate-800 backdrop-blur-sm border border-slate-700 text-white font-mono text-sm font-semibold uppercase tracking-wider transition-all duration-200 inline-flex items-center justify-center gap-2 min-h-[52px] shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+					class="px-7 py-3.5 sm:px-8 sm:py-4 bg-slate-900/90 hover:bg-slate-800 backdrop-blur-sm border border-slate-700 text-white font-mono text-xs sm:text-sm font-semibold uppercase tracking-wider transition-all duration-200 inline-flex items-center justify-center gap-2 shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white cursor-pointer"
 				>
 					<span>EXPLORE SERVICES</span>
 				</a>
 			</div>
 
 			<!-- Language & Motto Highlights -->
-			<div class="pt-8 border-t border-slate-800/80 grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl">
-				<div class="bg-slate-900/80 backdrop-blur-md border border-slate-800 p-4 flex items-center gap-3.5">
-					<div class="w-1.5 h-8 bg-[rgb(210,47,37)] shrink-0"></div>
+			<div class="pt-4 sm:pt-6 border-t border-slate-800/80 grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-2xl">
+				<div class="bg-slate-900/80 backdrop-blur-md border border-slate-800 p-3 sm:p-3.5 flex items-center gap-3">
+					<div class="w-1.5 h-7 bg-[rgb(210,47,37)] shrink-0"></div>
 					<div>
 						<span class="text-xs font-mono font-semibold uppercase text-white block tracking-wider">BILINGUAL INSTRUCTION</span>
 						<span class="text-xs text-slate-300 font-light">English &amp; Spanish available on-site.</span>
 					</div>
 				</div>
 
-				<div class="bg-slate-900/80 backdrop-blur-md border border-slate-800 p-4 flex items-center gap-3.5">
-					<div class="w-1.5 h-8 bg-slate-500 shrink-0"></div>
+				<div class="bg-slate-900/80 backdrop-blur-md border border-slate-800 p-3 sm:p-3.5 flex items-center gap-3">
+					<div class="w-1.5 h-7 bg-slate-500 shrink-0"></div>
 					<div>
 						<span class="text-xs font-mono font-semibold uppercase text-white block tracking-wider">OUR MOTTO</span>
 						<span class="text-xs text-slate-300 font-light italic">ADVICE. You can rely on. STRATEGIES. That work. EXPERTS. Whove been there.</span>
