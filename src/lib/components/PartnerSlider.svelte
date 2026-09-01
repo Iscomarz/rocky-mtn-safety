@@ -68,8 +68,7 @@
 			<!-- Slider Content Window: 4 items on desktop, 3 on tablet, 2 on mobile -->
 			<div class="flex-1 overflow-hidden">
 				<div 
-					class="flex transition-transform duration-500 ease-in-out gap-3 slider-track"
-					style:--slider-offset="{-currentIndex * 25}%"
+					class="flex transition-transform duration-500 ease-in-out gap-3 slider-pos-{currentIndex}"
 				>
 					{#each [...platforms, ...platforms] as platform, idx}
 						<div class="w-[calc(50%-6px)] sm:w-[calc(33.333%-8px)] md:w-[calc(25%-9px)] shrink-0">
@@ -100,7 +99,13 @@
 </section>
 
 <style>
-	.slider-track {
-		transform: translateX(var(--slider-offset, 0%));
-	}
+	.slider-pos-0 { transform: translateX(0%); }
+	.slider-pos-1 { transform: translateX(-25%); }
+	.slider-pos-2 { transform: translateX(-50%); }
+	.slider-pos-3 { transform: translateX(-75%); }
+	.slider-pos-4 { transform: translateX(-100%); }
+	.slider-pos-5 { transform: translateX(-125%); }
+	.slider-pos-6 { transform: translateX(-150%); }
+	.slider-pos-7 { transform: translateX(-175%); }
+	.slider-pos-8 { transform: translateX(-200%); }
 </style>

@@ -1,17 +1,23 @@
 <script lang="ts">
-	import heroBg from '$lib/backgrounds/pexels-kindelmedia-8487720.jpg';
+	import heroBgMobileWebp from '$lib/backgrounds/hero-bg-mobile.webp';
+	import heroBgWebp from '$lib/backgrounds/hero-bg.webp';
+	import heroBgJpg from '$lib/backgrounds/hero-bg.jpg';
 </script>
 
 <section id="hero" class="relative min-h-[calc(100svh-4.5rem)] lg:min-h-[calc(100vh-5rem)] flex items-center py-6 sm:py-10 lg:py-12 border-b border-slate-800 bg-slate-950 text-white overflow-hidden" aria-labelledby="hero-title">
-	<!-- Background Image (Full Width & Height, Visible & Vibrant) -->
-	<img
-		src={heroBg}
-		alt="Rocky Mountain Safety industrial workplace and field operations"
-		loading="eager"
-		fetchpriority="high"
-		decoding="async"
-		class="absolute inset-0 w-full h-full object-cover object-center transform scale-105 transition-transform duration-1000 brightness-105 contrast-105"
-	/>
+	<!-- Background Image (Responsive WebP & Optimized Fallback) -->
+	<picture class="absolute inset-0 w-full h-full">
+		<source srcset={heroBgMobileWebp} media="(max-width: 768px)" type="image/webp" />
+		<source srcset={heroBgWebp} type="image/webp" />
+		<img
+			src={heroBgJpg}
+			alt="Rocky Mountain Safety industrial workplace and field operations"
+			loading="eager"
+			fetchpriority="high"
+			decoding="async"
+			class="w-full h-full object-cover object-center transform scale-105 transition-transform duration-1000 brightness-105 contrast-105"
+		/>
+	</picture>
 
 	<!-- Light-Touch Dark Gradient Overlay: Clear Image Visibility with Crisp Text Contrast -->
 	<div class="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-slate-950/50 to-slate-950/25" aria-hidden="true"></div>
