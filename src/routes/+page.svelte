@@ -5,14 +5,15 @@
 	import WhyChooseUs from '$lib/components/WhyChooseUs.svelte';
 	import ServiceArea from '$lib/components/ServiceArea.svelte';
 	import PartnerSlider from '$lib/components/PartnerSlider.svelte';
+	import Faq from '$lib/components/Faq.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 </script>
 
 <svelte:head>
-	<title>Rocky Mountain Safety | Training, OQ &amp; Mobile Testing | Durango, CO</title>
+	<title>Rocky Mountain Safety | Training &amp; OQ | Durango, CO</title>
 	<meta
 		name="description"
-		content="Four Corners safety training, pipeline OQ evaluations, NCCER workforce services, drug and alcohol collection, respirator fit testing and mobile hearing testing from Rocky Mountain Safety by Safe Hands in Durango, Colorado."
+		content="Safety training, pipeline OQ evaluations, and mobile occupational health testing across the Four Corners from Rocky Mountain Safety in Durango, CO."
 	/>
 </svelte:head>
 
@@ -24,6 +25,7 @@
 		<WhyChooseUs />
 		<ServiceArea />
 		<PartnerSlider />
+		<Faq />
 	</main>
 	<Footer />
 </div>

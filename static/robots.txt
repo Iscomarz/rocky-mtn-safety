@@ -1,7 +1,9 @@
+# Allow legitimate crawlers by default
+User-agent: *
+Disallow:
+
 # Disallow AhrefsBot crawling
 User-agent: AhrefsBot
 Disallow: /
 
-# Allow legitimate crawlers by default
-User-agent: *
-Disallow:
+Sitemap: https://rockymtnsafety.com/sitemap.xml

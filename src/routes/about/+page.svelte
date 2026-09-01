@@ -4,13 +4,14 @@
 	import WhyChooseUs from '$lib/components/WhyChooseUs.svelte';
 	import PartnerSlider from '$lib/components/PartnerSlider.svelte';
 	import aboutFieldImg from '$lib/assets/Rocky-mtn-safety/IMG-20260522-WA0006.jpg';
+	import { t } from '$lib/i18n/index.svelte';
 </script>
 
 <svelte:head>
-	<title>About Us | Rocky Mountain Safety by Safe Hands | Durango, CO</title>
+	<title>{t('aboutPage.title')}</title>
 	<meta
 		name="description"
-		content="Learn about Rocky Mountain Safety by Safe Hands in Durango, CO. Experienced local safety leadership, bilingual instruction, and mobile health services across the Four Corners."
+		content={t('aboutPage.metaDesc')}
 	/>
 </svelte:head>
 
@@ -23,12 +24,12 @@
 			<div class="max-w-6xl mx-auto px-4 sm:px-6">
 				<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
 					<div class="lg:col-span-7 space-y-3">
-						<span class="text-xs font-mono text-[rgb(210,47,37)] uppercase font-bold tracking-wider">OUR FIELD EXPERIENCE</span>
+						<span class="text-xs font-mono text-[rgb(210,47,37)] uppercase font-bold tracking-wider">{t('aboutPage.badge')}</span>
 						<h1 class="text-3xl sm:text-4xl lg:text-5xl font-extralight uppercase text-slate-900 tracking-tight font-['Outfit']">
-							ADVICE. YOU CAN RELY ON. STRATEGIES. THAT WORK. <br /><span class="font-normal text-[rgb(210,47,37)]">EXPERTS. WHOVE BEEN THERE.</span>
+							{t('aboutPage.mainHeading')} <br /><span class="font-normal text-[rgb(210,47,37)]">{t('aboutPage.headingHighlight')}</span>
 						</h1>
 						<p class="text-sm text-slate-700 leading-relaxed">
-							Rocky Mountain Safety by Safe Hands delivers local expertise and national standards across Durango, Southwest Colorado, New Mexico, Arizona, and Utah.
+							{t('aboutPage.description')}
 						</p>
 					</div>
 					<div class="lg:col-span-5">

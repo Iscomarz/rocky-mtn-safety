@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { t } from '$lib/i18n/index.svelte';
 	import oqsgLogo from '$lib/assets/partners/oqsg.png';
 	import ewnLogo from '$lib/assets/partners/ewn.png';
 	import co811Logo from '$lib/assets/partners/co811.svg';
@@ -51,7 +52,7 @@
 	<div class="max-w-6xl mx-auto px-4 sm:px-6 space-y-4">
 		<div class="flex items-center justify-between gap-3">
 			<div class="h-px bg-slate-300 flex-1"></div>
-			<span class="text-xs font-mono font-bold uppercase tracking-widest text-slate-500">PARTNER WITH / ACCREDITED PLATFORMS</span>
+			<span class="text-xs font-mono font-bold uppercase tracking-widest text-slate-500">{t('partnerSlider.title')}</span>
 			<div class="h-px bg-slate-300 flex-1"></div>
 		</div>
 
@@ -60,7 +61,7 @@
 			<button
 				onclick={prevSlide}
 				class="w-8 h-8 sm:w-10 sm:h-10 shrink-0 bg-slate-100 hover:bg-slate-200 border border-slate-300 hover:border-[rgb(210,47,37)] text-slate-700 hover:text-slate-900 font-mono font-bold text-xl flex items-center justify-center transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[rgb(210,47,37)] cursor-pointer select-none z-10"
-				aria-label="Previous partners"
+				aria-label={t('partnerSlider.prevLabel')}
 			>
 				‹
 			</button>
@@ -68,8 +69,8 @@
 			<!-- Slider Content Window: 4 items on desktop, 3 on tablet, 2 on mobile -->
 			<div class="flex-1 overflow-hidden">
 				<div 
-					class="flex transition-transform duration-500 ease-in-out gap-3"
-					style="transform: translateX(-{currentIndex * 25}%);"
+					class="flex transition-transform duration-500 ease-in-out gap-3 slider-track"
+					style:--slider-offset="{-currentIndex * 25}%"
 				>
 					{#each [...platforms, ...platforms] as platform, idx}
 						<div class="w-[calc(50%-6px)] sm:w-[calc(33.333%-8px)] md:w-[calc(25%-9px)] shrink-0">
@@ -91,10 +92,16 @@
 			<button
 				onclick={nextSlide}
 				class="w-8 h-8 sm:w-10 sm:h-10 shrink-0 bg-slate-100 hover:bg-slate-200 border border-slate-300 hover:border-[rgb(210,47,37)] text-slate-700 hover:text-slate-900 font-mono font-bold text-xl flex items-center justify-center transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[rgb(210,47,37)] cursor-pointer select-none z-10"
-				aria-label="Next partners"
+				aria-label={t('partnerSlider.nextLabel')}
 			>
 				›
 			</button>
 		</div>
 	</div>
 </section>
+
+<style>
+	.slider-track {
+		transform: translateX(var(--slider-offset, 0%));
+	}
+</style>
