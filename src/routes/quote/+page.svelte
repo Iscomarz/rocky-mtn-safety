@@ -1,7 +1,6 @@
 <script lang="ts">
 	import Header from '$lib/components/Header.svelte';
 	import Footer from '$lib/components/Footer.svelte';
-	import { t } from '$lib/i18n/index.svelte';
 
 	let copiedNotification = $state<string | null>(null);
 
@@ -19,10 +18,10 @@
 </script>
 
 <svelte:head>
-	<title>{t('quoteForm.titlePrefix')} {t('quoteForm.titleHighlight')} | Rocky Mountain Safety</title>
+	<title>Request a Quote | Rocky Mountain Safety by Safe Hands</title>
 	<meta
 		name="description"
-		content={t('quoteForm.subtitle')}
+		content="Contact Rocky Mountain Safety directly by phone or email for fast safety training, OQ evaluations, and mobile medical testing quotes in Durango and the Four Corners."
 	/>
 </svelte:head>
 
@@ -42,15 +41,15 @@
 			
 			<!-- Badge & Title -->
 			<div class="inline-block px-3 py-1 bg-white border border-slate-300 text-xs font-mono text-slate-700 uppercase tracking-widest shadow-sm">
-				{t('quoteForm.badge')}
+				DIRECT TELEPHONE &amp; EMAIL DISPATCH
 			</div>
 
 			<h1 class="text-3xl sm:text-5xl font-extralight uppercase text-slate-900 tracking-tight font-['Outfit']">
-				{t('quoteForm.titlePrefix')} <span class="font-normal text-[rgb(210,47,37)]">{t('quoteForm.titleHighlight')}</span>
+				REQUEST A <span class="font-normal text-[rgb(210,47,37)]">SERVICE QUOTE</span>
 			</h1>
 
 			<p class="text-base text-slate-600 font-light max-w-xl mx-auto">
-				{t('quoteForm.subtitle')}
+				Currently, all service quotes, inquiries, and scheduling are dispatched directly via telephone or email with our Durango team.
 			</p>
 
 			<!-- Direct Contact Cards -->
@@ -59,7 +58,7 @@
 				<!-- Durango Local Office -->
 				<div class="industrial-card p-6 bg-white border-l-4 border-l-[rgb(210,47,37)] shadow-md space-y-4">
 					<div>
-						<span class="text-xs font-mono text-[rgb(210,47,37)] uppercase font-semibold tracking-wider block">{t('footer.localLabel')}</span>
+						<span class="text-xs font-mono text-[rgb(210,47,37)] uppercase font-semibold tracking-wider block">DURANGO LOCAL OFFICE</span>
 						<h2 class="text-lg font-light text-slate-900 uppercase font-['Outfit'] mt-1">LORI SANCHEZ</h2>
 						<span class="text-xs text-slate-500 font-mono block">Direct Representative</span>
 					</div>
@@ -91,7 +90,7 @@
 				<!-- Main Office / Safe Hands -->
 				<div class="industrial-card p-6 bg-white border-l-4 border-l-slate-800 shadow-md space-y-4">
 					<div>
-						<span class="text-xs font-mono text-slate-500 uppercase font-semibold tracking-wider block">{t('footer.mainOfficeLabel')}</span>
+						<span class="text-xs font-mono text-slate-500 uppercase font-semibold tracking-wider block">MAIN OFFICE / SAFE HANDS</span>
 						<h2 class="text-lg font-light text-slate-900 uppercase font-['Outfit'] mt-1">JOYCE SANCHEZ</h2>
 						<span class="text-xs text-slate-500 font-mono block">Central Support</span>
 					</div>
@@ -125,15 +124,15 @@
 			<!-- Office Location & Hours Box -->
 			<div class="industrial-box p-6 bg-white text-left grid grid-cols-1 sm:grid-cols-2 gap-4 border border-slate-300">
 				<div>
-					<span class="text-xs font-mono font-semibold uppercase text-slate-900 block tracking-wider">{t('footer.officeTitle')}</span>
-					<span class="text-xs text-slate-600 font-light block mt-1">{t('footer.addressLine1')}</span>
-					<span class="text-xs text-slate-600 font-light block">{t('footer.addressLine2')}</span>
+					<span class="text-xs font-mono font-semibold uppercase text-slate-900 block tracking-wider">DURANGO TRAINING CENTER</span>
+					<span class="text-xs text-slate-600 font-light block mt-1">858 Main St, Unit 203</span>
+					<span class="text-xs text-slate-600 font-light block">Durango, Colorado 81301</span>
 				</div>
 
 				<div>
-					<span class="text-xs font-mono font-semibold uppercase text-slate-900 block tracking-wider">{t('footer.hoursLabel')}</span>
-					<span class="text-xs text-slate-600 font-light block mt-1">{t('footer.hoursText')}</span>
-					<span class="text-xs text-[rgb(210,47,37)] font-light block">{t('footer.hoursSub')}</span>
+					<span class="text-xs font-mono font-semibold uppercase text-slate-900 block tracking-wider">OPERATING HOURS</span>
+					<span class="text-xs text-slate-600 font-light block mt-1">Monday – Friday: 8:00 AM – 4:00 PM</span>
+					<span class="text-xs text-[rgb(210,47,37)] font-light block">Weekend &amp; after-hours service by appointment</span>
 				</div>
 			</div>
 

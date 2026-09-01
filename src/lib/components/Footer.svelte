@@ -1,6 +1,5 @@
 <script lang="ts">
 	import logoOficial from '$lib/assets/Rocky-mtn-safety/logo-cropped.png';
-	import { t } from '$lib/i18n/index.svelte';
 </script>
 
 <footer class="bg-[rgb(18,18,18)] text-zinc-400 border-t border-zinc-800" aria-label="Site Footer">
@@ -13,10 +12,10 @@
 					<img src={logoOficial} alt="Rocky Mountain Safety Official Logo" class="h-14 w-auto object-contain" />
 				</a>
 				<p class="text-xs text-zinc-400 leading-relaxed">
-					{t('footer.tagline')}
+					Providing certified safety training, Operator Qualification (OQ) evaluations, and mobile occupational health testing across Durango and the Four Corners Region.
 				</p>
 				<p class="text-xs font-bold text-white uppercase italic">
-					{t('footer.motto')}
+					"ADVICE. You can rely on. STRATEGIES. That work. EXPERTS. Whove been there."
 				</p>
 				<!-- Social Media & Profile Links -->
 				<div class="pt-2 flex items-center gap-2.5">
@@ -52,25 +51,25 @@
 
 			<!-- Column 2: Core Services Links -->
 			<div class="space-y-3 font-mono text-xs">
-				<h4 class="font-bold text-white uppercase tracking-wider text-xs border-b border-zinc-800 pb-2">{t('footer.pagesTitle')}</h4>
+				<h4 class="font-bold text-white uppercase tracking-wider text-xs border-b border-zinc-800 pb-2">PAGES & SERVICES</h4>
 				<ul class="space-y-2 uppercase">
-					<li><a href="/oq-pipeline" class="hover:text-[rgb(210,47,37)] transition-colors">{t('footer.navOq')}</a></li>
-					<li><a href="/safety-training" class="hover:text-[rgb(210,47,37)] transition-colors">{t('footer.navTraining')}</a></li>
-					<li><a href="/nccer" class="hover:text-[rgb(210,47,37)] transition-colors">{t('footer.navNccer')}</a></li>
-					<li><a href="/occupational-health" class="hover:text-[rgb(210,47,37)] transition-colors">{t('footer.navHealth')}</a></li>
-					<li><a href="/about" class="hover:text-[rgb(210,47,37)] transition-colors">{t('footer.navAbout')}</a></li>
-					<li><a href="/service-area" class="hover:text-[rgb(210,47,37)] transition-colors">{t('footer.navArea')}</a></li>
-					<li><a href="/quote" class="hover:text-[rgb(210,47,37)] transition-colors">{t('footer.navQuote')}</a></li>
+					<li><a href="/oq-pipeline" class="hover:text-[rgb(210,47,37)] transition-colors">Operator Qualification (OQ)</a></li>
+					<li><a href="/safety-training" class="hover:text-[rgb(210,47,37)] transition-colors">Safety Training Courses</a></li>
+					<li><a href="/nccer" class="hover:text-[rgb(210,47,37)] transition-colors">NCCER Workforce Development</a></li>
+					<li><a href="/occupational-health" class="hover:text-[rgb(210,47,37)] transition-colors">Occupational Health & Mobile Testing</a></li>
+					<li><a href="/about" class="hover:text-[rgb(210,47,37)] transition-colors">About Us</a></li>
+					<li><a href="/service-area" class="hover:text-[rgb(210,47,37)] transition-colors">Four Corners Service Area</a></li>
+					<li><a href="/quote" class="hover:text-[rgb(210,47,37)] transition-colors">Request a Quote</a></li>
 				</ul>
 			</div>
 
 			<!-- Column 3: Office Address & Hours -->
 			<div class="space-y-3 font-mono text-xs">
-				<h4 class="font-bold text-white uppercase tracking-wider text-xs border-b border-zinc-800 pb-2">{t('footer.officeTitle')}</h4>
+				<h4 class="font-bold text-white uppercase tracking-wider text-xs border-b border-zinc-800 pb-2">DURANGO OFFICE & HOURS</h4>
 				<div class="space-y-2">
 					<address class="not-italic" itemscope itemtype="https://schema.org/PostalAddress">
-						<span class="text-[10px] text-zinc-500 uppercase block">{t('footer.locationLabel')}</span>
-						<span class="text-xs text-zinc-300 block" itemprop="streetAddress">{t('footer.addressLine1')}</span>
+						<span class="text-[10px] text-zinc-500 uppercase block">LOCATION</span>
+						<span class="text-xs text-zinc-300 block" itemprop="streetAddress">858 Main St, Unit 203</span>
 						<span class="text-xs text-zinc-300 block">
 							<span itemprop="addressLocality">Durango</span>, <span itemprop="addressRegion">CO</span> <span itemprop="postalCode">81301</span>
 						</span>
@@ -81,22 +80,22 @@
 						rel="noopener noreferrer"
 						class="inline-flex items-center gap-1 text-[10px] font-mono text-[rgb(210,47,37)] hover:text-white transition-colors"
 					>
-						<span>{t('footer.googleMaps')} →</span>
+						<span>VIEW ON GOOGLE MAPS →</span>
 					</a>
 					<div class="pt-1">
-						<span class="text-[10px] text-zinc-500 uppercase block">{t('footer.hoursLabel')}</span>
-						<span class="text-xs text-zinc-300 block">{t('footer.hoursText')}</span>
-						<span class="text-[11px] text-[rgb(210,47,37)] block">{t('footer.hoursSub')}</span>
+						<span class="text-[10px] text-zinc-500 uppercase block">BUSINESS HOURS</span>
+						<span class="text-xs text-zinc-300 block">Mon–Fri: 8:00 AM – 4:00 PM</span>
+						<span class="text-[11px] text-[rgb(210,47,37)] block">After-hours & weekends by appt</span>
 					</div>
 				</div>
 			</div>
 
 			<!-- Column 4: Direct Contacts -->
 			<div class="space-y-3 font-mono text-xs">
-				<h4 class="font-bold text-white uppercase tracking-wider text-xs border-b border-zinc-800 pb-2">{t('footer.contactTitle')}</h4>
+				<h4 class="font-bold text-white uppercase tracking-wider text-xs border-b border-zinc-800 pb-2">DIRECT CONTACTS</h4>
 				<div class="space-y-2.5">
 					<div>
-						<span class="text-[10px] text-zinc-500 uppercase block">{t('footer.localLabel')}</span>
+						<span class="text-[10px] text-zinc-500 uppercase block">DURANGO LOCAL CONTACT</span>
 						<span class="text-xs font-semibold text-zinc-300 block">Lori Sanchez</span>
 						<a href="tel:+19707648799" class="text-xs font-bold text-white hover:text-[rgb(210,47,37)] transition-colors block">
 							(970) 764-8799
@@ -106,7 +105,7 @@
 						</a>
 					</div>
 					<div class="pt-1 border-t border-zinc-800/80">
-						<span class="text-[10px] text-zinc-500 uppercase block">{t('footer.mainOfficeLabel')}</span>
+						<span class="text-[10px] text-zinc-500 uppercase block">MAIN OFFICE / SAFE HANDS</span>
 						<span class="text-xs font-semibold text-zinc-300 block">Joyce Sanchez</span>
 						<a href="tel:+14322312207" class="text-xs font-bold text-white hover:text-[rgb(210,47,37)] transition-colors block">
 							(432) 231-2207
@@ -120,12 +119,12 @@
 		<!-- Bottom Copyright Row -->
 		<div class="pt-8 border-t border-zinc-800/80 flex flex-col sm:flex-row items-center justify-between text-xs font-mono uppercase tracking-wider gap-4">
 			<div>
-				© {new Date().getFullYear()} {t('footer.rights')}
+				© {new Date().getFullYear()} ROCKY MOUNTAIN SAFETY BY SAFE HANDS. ALL RIGHTS RESERVED.
 			</div>
 			<div class="flex items-center gap-4 text-zinc-500">
-				<span>{t('footer.durangoBadge')}</span>
+				<span>DURANGO, CO</span>
 				<span>•</span>
-				<a href="/coming-soon" class="hover:text-zinc-300 transition-colors">{t('footer.backupLink')}</a>
+				<a href="/coming-soon" class="hover:text-zinc-300 transition-colors">BACKUP COMING SOON PAGE</a>
 			</div>
 		</div>
 	</div>

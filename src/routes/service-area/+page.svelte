@@ -4,14 +4,13 @@
 	import ServiceArea from '$lib/components/ServiceArea.svelte';
 	import PartnerSlider from '$lib/components/PartnerSlider.svelte';
 	import areaLandscapeImg from '$lib/assets/Rocky-mtn-safety/IMG-20260522-WA0004.jpg';
-	import { t } from '$lib/i18n/index.svelte';
 </script>
 
 <svelte:head>
-	<title>{t('serviceAreaPage.title')}</title>
+	<title>Service Area | Four Corners Region Coverage | Rocky Mountain Safety</title>
 	<meta
 		name="description"
-		content={t('serviceAreaPage.metaDesc')}
+		content="Regional safety training and mobile testing coverage across Durango CO, Southwest Colorado, San Juan Basin NM, Arizona, and Utah."
 	/>
 </svelte:head>
 
@@ -23,12 +22,12 @@
 			<div class="max-w-6xl mx-auto px-4 sm:px-6">
 				<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
 					<div class="lg:col-span-7 space-y-3">
-						<span class="text-xs font-mono text-[rgb(210,47,37)] uppercase font-bold tracking-wider">{t('serviceAreaPage.badge')}</span>
+						<span class="text-xs font-mono text-[rgb(210,47,37)] uppercase font-bold tracking-wider">REGIONAL FIELD FOOTPRINT</span>
 						<h1 class="text-3xl sm:text-4xl lg:text-5xl font-extralight uppercase text-slate-900 tracking-tight font-['Outfit']">
-							{t('serviceAreaPage.headingPrefix')} <span class="font-normal text-[rgb(210,47,37)]">{t('serviceAreaPage.headingHighlight')}</span>
+							SERVICING THE <span class="font-normal text-[rgb(210,47,37)]">FOUR CORNERS ENERGY BASINS</span>
 						</h1>
 						<p class="text-sm text-slate-700 leading-relaxed">
-							{t('serviceAreaPage.subheading')}
+							From our Durango headquarters, our instructors and mobile medical units cover Southwest Colorado, the San Juan Basin in New Mexico, Eastern Arizona, and Utah.
 						</p>
 					</div>
 					<div class="lg:col-span-5">

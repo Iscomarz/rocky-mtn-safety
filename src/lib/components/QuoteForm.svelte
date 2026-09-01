@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
-	import { t } from '$lib/i18n/index.svelte';
 
 	let { form }: { form?: { success?: boolean; error?: string; demoMode?: boolean; message?: string } | null } = $props();
 
@@ -37,13 +36,13 @@
 		<!-- Form Header -->
 		<div class="text-center space-y-3">
 			<div class="inline-block px-3 py-1 bg-white border border-slate-300 text-xs font-mono text-slate-700 uppercase tracking-widest shadow-sm">
-				{t('quoteForm.badge')}
+				RAPID RESPONSE ESTIMATES
 			</div>
 			<h2 id="quote-heading" class="text-3xl sm:text-4xl font-extralight uppercase text-slate-900 tracking-tight font-['Outfit']">
-				{t('quoteForm.titlePrefix')} <span class="font-normal text-[rgb(210,47,37)]">{t('quoteForm.titleHighlight')}</span>
+				REQUEST A <span class="font-normal text-[rgb(210,47,37)]">SERVICE QUOTE</span>
 			</h2>
 			<p class="text-sm text-slate-600 max-w-xl mx-auto font-light">
-				{t('quoteForm.subtitle')}
+				Submit your training, Operator Qualification, or mobile medical testing request. Our Durango office will follow up with scheduling and pricing details.
 			</p>
 		</div>
 
@@ -54,9 +53,9 @@
 					<div class="w-16 h-16 bg-emerald-100 border border-emerald-400 text-emerald-700 rounded-full flex items-center justify-center mx-auto text-2xl font-bold">
 						✓
 					</div>
-					<h3 class="text-2xl font-light uppercase text-slate-900 font-['Outfit']">{t('quoteForm.successTitle')}</h3>
+					<h3 class="text-2xl font-light uppercase text-slate-900 font-['Outfit']">QUOTE REQUEST SENT SUCCESSFULLY</h3>
 					<p class="text-sm text-slate-600 max-w-md mx-auto">
-						{t('quoteForm.successDesc')}
+						Thank you for contacting Rocky Mountain Safety. Our team will review your request and reach out shortly to coordinate services.
 					</p>
 
 					{#if form?.demoMode}
@@ -70,9 +69,9 @@
 							submitted = false;
 							errorMessage = '';
 						}}
-						class="px-6 py-2.5 bg-slate-900 hover:bg-slate-800 text-white font-mono text-xs font-bold uppercase tracking-wider transition-colors mt-4 inline-block cursor-pointer"
+						class="px-6 py-2.5 bg-slate-900 hover:bg-slate-800 text-white font-mono text-xs font-bold uppercase tracking-wider transition-colors mt-4 inline-block"
 					>
-						{t('quoteForm.submitAnother')}
+						SUBMIT ANOTHER REQUEST
 					</button>
 				</div>
 			{:else}
@@ -113,7 +112,7 @@
 						<!-- Company Name -->
 						<div class="space-y-1.5">
 							<label for="company" class="block font-mono text-xs font-bold uppercase text-slate-900">
-								{t('quoteForm.companyName')}
+								COMPANY NAME <span class="text-[rgb(210,47,37)]">*</span>
 							</label>
 							<input
 								type="text"
@@ -129,7 +128,7 @@
 						<!-- Contact Name -->
 						<div class="space-y-1.5">
 							<label for="contactName" class="block font-mono text-xs font-bold uppercase text-slate-900">
-								{t('quoteForm.fullName')}
+								CONTACT NAME <span class="text-[rgb(210,47,37)]">*</span>
 							</label>
 							<input
 								type="text"
@@ -145,7 +144,7 @@
 						<!-- Phone Number -->
 						<div class="space-y-1.5">
 							<label for="phone" class="block font-mono text-xs font-bold uppercase text-slate-900">
-								{t('quoteForm.phone')}
+								PHONE NUMBER <span class="text-[rgb(210,47,37)]">*</span>
 							</label>
 							<input
 								type="tel"
@@ -161,7 +160,7 @@
 						<!-- Email Address -->
 						<div class="space-y-1.5">
 							<label for="email" class="block font-mono text-xs font-bold uppercase text-slate-900">
-								{t('quoteForm.email')}
+								EMAIL ADDRESS <span class="text-[rgb(210,47,37)]">*</span>
 							</label>
 							<input
 								type="email"
@@ -177,7 +176,7 @@
 						<!-- Service Requested -->
 						<div class="space-y-1.5">
 							<label for="serviceRequested" class="block font-mono text-xs font-bold uppercase text-slate-900">
-								{t('quoteForm.serviceType')}
+								SERVICE REQUESTED <span class="text-[rgb(210,47,37)]">*</span>
 							</label>
 							<select
 								id="serviceRequested"
@@ -185,19 +184,19 @@
 								bind:value={serviceRequested}
 								class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 focus:border-[rgb(210,47,37)] focus:bg-white text-slate-900 text-sm font-sans focus-visible:outline-none transition-colors"
 							>
-								<option value="OQ Pipeline Services">{t('quoteForm.oqService')}</option>
-								<option value="Safety Training Courses">{t('quoteForm.trainingService')}</option>
-								<option value="NCCER Craft Credentials">{t('quoteForm.nccerService')}</option>
-								<option value="Mobile Medical & Drug Testing">{t('quoteForm.healthService')}</option>
-								<option value="Respirator Fit & Hearing Testing">{t('quoteForm.fitService')}</option>
-								<option value="Multiple Services / Full Package">{t('quoteForm.multipleService')}</option>
+								<option value="OQ Pipeline Services">Operator Qualification (OQ) &amp; Pipeline</option>
+								<option value="Safety Training Courses">Safety Training Courses (SafeLand / H2S / OSHA)</option>
+								<option value="NCCER Craft Credentials">NCCER Workforce Credentials</option>
+								<option value="Mobile Medical & Drug Testing">Mobile Drug &amp; Alcohol Testing</option>
+								<option value="Respirator Fit & Hearing Testing">Respirator Fit &amp; Hearing Testing</option>
+								<option value="Multiple Services / Full Package">Multiple Services / Full Safety Package</option>
 							</select>
 						</div>
 
 						<!-- Employee Count -->
 						<div class="space-y-1.5">
 							<label for="employeeCount" class="block font-mono text-xs font-bold uppercase text-slate-900">
-								{t('quoteForm.employeeCount')}
+								ESTIMATED WORKERS / CREW SIZE
 							</label>
 							<input
 								type="text"
@@ -212,7 +211,7 @@
 						<!-- Location / Jobsite -->
 						<div class="space-y-1.5">
 							<label for="location" class="block font-mono text-xs font-bold uppercase text-slate-900">
-								{t('quoteForm.location')}
+								JOBSITE LOCATION / CITY
 							</label>
 							<input
 								type="text"
@@ -227,7 +226,7 @@
 						<!-- Preferred Date -->
 						<div class="space-y-1.5">
 							<label for="preferredDate" class="block font-mono text-xs font-bold uppercase text-slate-900">
-								{t('quoteForm.preferredDate')}
+								PREFERRED DATE / TIMELINE
 							</label>
 							<input
 								type="text"
@@ -244,7 +243,7 @@
 					<!-- Additional Message -->
 					<div class="space-y-1.5">
 						<label for="message" class="block font-mono text-xs font-bold uppercase text-slate-900">
-							{t('quoteForm.message')}
+							ADDITIONAL DETAILS / SPECIFIC TASKS
 						</label>
 						<textarea
 							id="message"
@@ -258,7 +257,7 @@
 
 					<!-- Privacy Notice -->
 					<p class="text-[11px] text-slate-500 italic">
-						{t('quoteForm.privacyNotice')}
+						🔒 Privacy Notice: Information submitted is used solely to provide services and quotes. We never request sensitive personal or medical records online.
 					</p>
 
 					<!-- Submit Button -->
@@ -269,9 +268,9 @@
 							class="w-full py-4 bg-[rgb(210,47,37)] hover:bg-[rgb(235,57,47)] text-white font-mono text-sm font-bold uppercase tracking-wider transition-colors shadow-md disabled:opacity-50 cursor-pointer"
 						>
 							{#if isSubmitting}
-								<span>{t('quoteForm.submitting')}</span>
+								<span>SENDING REQUEST...</span>
 							{:else}
-								<span>{t('quoteForm.submitBtn')}</span>
+								<span>SUBMIT QUOTE REQUEST</span>
 							{/if}
 						</button>
 					</div>

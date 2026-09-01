@@ -3,14 +3,13 @@
 	import Footer from '$lib/components/Footer.svelte';
 	import PartnerSlider from '$lib/components/PartnerSlider.svelte';
 	import healthWorkerImg from '$lib/assets/Rocky-mtn-safety/IMG-20260522-WA0005.jpg';
-	import { t } from '$lib/i18n/index.svelte';
 </script>
 
 <svelte:head>
-	<title>{t('healthPage.title')}</title>
+	<title>Occupational Health &amp; Mobile Testing | Rocky Mountain Safety</title>
 	<meta
 		name="description"
-		content={t('healthPage.metaDesc')}
+		content="On-site mobile drug and alcohol testing, N95/respirator fit testing, audiometric hearing testing, and background checks brought directly to your job site in Colorado, NM, AZ, and UT."
 	/>
 </svelte:head>
 
@@ -24,20 +23,20 @@
 			<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
 				<div class="lg:col-span-7 space-y-4 text-left">
 					<div class="inline-block px-3 py-1 bg-white border border-slate-300 text-xs font-mono text-slate-700 uppercase tracking-widest shadow-sm">
-						{t('healthPage.badge')}
+						MOBILE ON-SITE MEDICAL SERVICES
 					</div>
 					<h1 class="text-3xl sm:text-5xl font-extralight uppercase text-slate-900 tracking-tight font-['Outfit']">
-						{t('healthPage.headingPrefix')} <span class="font-normal text-[rgb(210,47,37)]">{t('healthPage.headingHighlight')}</span>
+						OCCUPATIONAL HEALTH &amp; <span class="font-normal text-[rgb(210,47,37)]">MOBILE TESTING</span>
 					</h1>
 					<p class="text-base text-slate-700 leading-relaxed">
-						{t('healthPage.subheading')}
+						We dispatch certified mobile occupational health testing units directly to your job site, yard, or facility — eliminating worker downtime and keeping your operations 100% compliant.
 					</p>
 					<div class="pt-2">
 						<a
 							href="/quote"
 							class="inline-block px-8 py-3.5 bg-[rgb(210,47,37)] hover:bg-[rgb(235,57,47)] text-white font-mono text-xs font-bold uppercase tracking-wider transition-colors shadow-md"
 						>
-							{t('healthPage.ctaSchedule')}
+							SCHEDULE MOBILE TESTING
 						</a>
 					</div>
 				</div>
@@ -50,7 +49,7 @@
 							class="w-full h-auto object-cover"
 						/>
 						<div class="p-3 bg-slate-900 border-t border-slate-800 text-center font-mono text-xs text-white uppercase">
-							{t('healthPage.bannerBadge')}
+							MOBILE TESTING • ZERO WORKER DOWNTIME
 						</div>
 					</div>
 				</div>
@@ -60,33 +59,33 @@
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 				<div class="industrial-card p-6 space-y-3 bg-white border-l-4 border-l-[rgb(210,47,37)]">
 					<div class="w-3 h-1 bg-[rgb(210,47,37)]"></div>
-					<h2 class="text-lg font-bold uppercase text-slate-900">{t('healthPage.service1Title')}</h2>
+					<h2 class="text-lg font-bold uppercase text-slate-900">MOBILE DRUG &amp; ALCOHOL TESTING</h2>
 					<p class="text-xs text-slate-600 leading-relaxed">
-						{t('healthPage.service1Desc')}
+						DOT and Non-DOT urine drug collections, breath alcohol testing (BAT), hair follicle testing, and random drug testing pool management delivered directly to your job site.
 					</p>
 				</div>
 
 				<div class="industrial-card p-6 space-y-3 bg-white border-l-4 border-l-[rgb(210,47,37)]">
 					<div class="w-3 h-1 bg-[rgb(210,47,37)]"></div>
-					<h2 class="text-lg font-bold uppercase text-slate-900">{t('healthPage.service2Title')}</h2>
+					<h2 class="text-lg font-bold uppercase text-slate-900">RESPIRATOR FIT TESTING</h2>
 					<p class="text-xs text-slate-600 leading-relaxed">
-						{t('healthPage.service2Desc')}
+						OSHA-compliant quantitative (PortaCount) and qualitative fit testing for N95, half-mask, and full-face respirators, complete with medical evaluation clearances.
 					</p>
 				</div>
 
 				<div class="industrial-card p-6 space-y-3 bg-white border-l-4 border-l-[rgb(210,47,37)]">
 					<div class="w-3 h-1 bg-[rgb(210,47,37)]"></div>
-					<h2 class="text-lg font-bold uppercase text-slate-900">{t('healthPage.service3Title')}</h2>
+					<h2 class="text-lg font-bold uppercase text-slate-900">AUDIOMETRIC (HEARING) TESTING</h2>
 					<p class="text-xs text-slate-600 leading-relaxed">
-						{t('healthPage.service3Desc')}
+						Mobile hearing conservation testing with CAOHC-certified technicians to monitor baseline and annual noise exposure thresholds for field personnel.
 					</p>
 				</div>
 
 				<div class="industrial-card p-6 space-y-3 bg-white border-l-4 border-l-[rgb(210,47,37)]">
 					<div class="w-3 h-1 bg-[rgb(210,47,37)]"></div>
-					<h2 class="text-lg font-bold uppercase text-slate-900">{t('healthPage.service4Title')}</h2>
+					<h2 class="text-lg font-bold uppercase text-slate-900">EMPLOYEE BACKGROUND SCREENING</h2>
 					<p class="text-xs text-slate-600 leading-relaxed">
-						{t('healthPage.service4Desc')}
+						Pre-employment screening, driving record (MVR) checks, and contractor background verifications required for operator site access.
 					</p>
 				</div>
 			</div>

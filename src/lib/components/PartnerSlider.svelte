@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { t } from '$lib/i18n/index.svelte';
 	import oqsgLogo from '$lib/assets/partners/oqsg.png';
 	import ewnLogo from '$lib/assets/partners/ewn.png';
 	import co811Logo from '$lib/assets/partners/co811.svg';
@@ -52,7 +51,7 @@
 	<div class="max-w-6xl mx-auto px-4 sm:px-6 space-y-4">
 		<div class="flex items-center justify-between gap-3">
 			<div class="h-px bg-slate-300 flex-1"></div>
-			<span class="text-xs font-mono font-bold uppercase tracking-widest text-slate-500">{t('partnerSlider.title')}</span>
+			<span class="text-xs font-mono font-bold uppercase tracking-widest text-slate-500">PARTNER WITH / ACCREDITED PLATFORMS</span>
 			<div class="h-px bg-slate-300 flex-1"></div>
 		</div>
 
@@ -61,7 +60,7 @@
 			<button
 				onclick={prevSlide}
 				class="w-8 h-8 sm:w-10 sm:h-10 shrink-0 bg-slate-100 hover:bg-slate-200 border border-slate-300 hover:border-[rgb(210,47,37)] text-slate-700 hover:text-slate-900 font-mono font-bold text-xl flex items-center justify-center transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[rgb(210,47,37)] cursor-pointer select-none z-10"
-				aria-label={t('partnerSlider.prevLabel')}
+				aria-label="Previous partners"
 			>
 				‹
 			</button>
@@ -92,7 +91,7 @@
 			<button
 				onclick={nextSlide}
 				class="w-8 h-8 sm:w-10 sm:h-10 shrink-0 bg-slate-100 hover:bg-slate-200 border border-slate-300 hover:border-[rgb(210,47,37)] text-slate-700 hover:text-slate-900 font-mono font-bold text-xl flex items-center justify-center transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[rgb(210,47,37)] cursor-pointer select-none z-10"
-				aria-label={t('partnerSlider.nextLabel')}
+				aria-label="Next partners"
 			>
 				›
 			</button>

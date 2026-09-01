@@ -1,49 +1,45 @@
 <script lang="ts">
-	import { t } from '$lib/i18n/index.svelte';
-
 	let openIndex = $state<number | null>(0);
 
 	function toggle(index: number) {
 		openIndex = openIndex === index ? null : index;
 	}
 
-	const faqs = $derived([
+	const faqs = [
 		{
-			q: t('faq.q1'),
-			a: t('faq.a1')
+			q: 'What safety training and compliance services does Rocky Mountain Safety provide?',
+			a: 'We provide certified Operator Qualification (OQ) evaluations, industrial safety courses (SafeLandUSA, OSHA 10 & 30, PEC H2S Clear, Basin United, Forklift, MSHA), NCCER craft credentials, and mobile occupational health testing.'
 		},
 		{
-			q: t('faq.q2'),
-			a: t('faq.a2')
+			q: 'Can your instructors and medical testing units come directly to our job site or yard?',
+			a: 'Yes. We operate fully mobile units that travel directly to your yard or job site across Southwest Colorado, Northern New Mexico (San Juan Basin), Northern Arizona, and Eastern Utah to minimize worker downtime.'
 		},
 		{
-			q: t('faq.q3'),
-			a: t('faq.a3')
+			q: 'Which Operator Qualification (OQ) platforms and standards do you support?',
+			a: 'Our certified evaluators support major industry platforms including Veriforce, Energy Worldnet (EWN), OQSG, ITS, and ISNetworld, ensuring strict DOT and PHMSA compliance for pipeline personnel.'
 		},
 		{
-			q: t('faq.q4'),
-			a: t('faq.a4')
+			q: 'Are courses and evaluations available with bilingual instructors?',
+			a: 'Yes. All our safety training courses, OQ evaluations, and mobile medical screenings can be conducted by fluent bilingual (English and Spanish) instructors upon request.'
 		},
 		{
-			q: t('faq.q5'),
-			a: t('faq.a5')
+			q: 'What mobile occupational health testing services do you perform on-site?',
+			a: 'We conduct DOT & Non-DOT drug and alcohol collections, quantitative respirator fit testing (QNFT), audiometric hearing tests, and pre-employment/DOT physical exams.'
 		}
-	]);
+	];
 
-	const faqJsonLd = $derived(
-		JSON.stringify({
-			'@context': 'https://schema.org',
-			'@type': 'FAQPage',
-			mainEntity: faqs.map((faq) => ({
-				'@type': 'Question',
-				name: faq.q,
-				acceptedAnswer: {
-					'@type': 'Answer',
-					text: faq.a
-				}
-			}))
-		})
-	);
+	const faqJsonLd = JSON.stringify({
+		'@context': 'https://schema.org',
+		'@type': 'FAQPage',
+		mainEntity: faqs.map((faq) => ({
+			'@type': 'Question',
+			name: faq.q,
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: faq.a
+			}
+		}))
+	});
 </script>
 
 <svelte:head>
@@ -55,13 +51,13 @@
 		<!-- Section Header -->
 		<div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16 space-y-3">
 			<span class="text-xs font-mono text-[rgb(210,47,37)] uppercase font-bold tracking-widest block">
-				{t('faq.badge')}
+				FREQUENTLY ASKED QUESTIONS
 			</span>
 			<h2 id="faq-heading" class="text-3xl sm:text-4xl font-extralight uppercase text-slate-900 tracking-tight font-['Outfit']">
-				{t('faq.titlePrefix')} <span class="font-normal text-[rgb(210,47,37)]">{t('faq.titleHighlight')}</span>
+				COMMONLY ASKED <span class="font-normal text-[rgb(210,47,37)]">QUESTIONS</span>
 			</h2>
 			<p class="text-sm sm:text-base text-slate-600 leading-relaxed">
-				{t('faq.subtitle')}
+				Find clear answers about our safety certifications, pipeline OQ evaluations, and mobile health services across the Four Corners.
 			</p>
 		</div>
 
@@ -113,17 +109,17 @@
 		<div class="mt-12 text-center p-6 bg-slate-50 border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4">
 			<div class="text-left">
 				<h3 class="text-sm font-bold uppercase tracking-wider text-slate-900 font-mono">
-					{t('whyChooseUs.feature1Title')}
+					LOCAL DURANGO LEADERSHIP
 				</h3>
 				<p class="text-xs text-slate-600">
-					{t('footer.tagline')}
+					Providing certified safety training, Operator Qualification (OQ) evaluations, and mobile occupational health testing across Durango and the Four Corners Region.
 				</p>
 			</div>
 			<a
 				href="/quote"
 				class="px-5 py-2.5 bg-[rgb(210,47,37)] hover:bg-[rgb(235,57,47)] text-white font-mono text-xs font-bold uppercase tracking-wider transition-all whitespace-nowrap"
 			>
-				{t('nav.requestQuote')} →
+				REQUEST A QUOTE →
 			</a>
 		</div>
 	</div>
